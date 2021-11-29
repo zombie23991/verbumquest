@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "771041487257",
+    "project_id": "verbumquest",
+    "storage_bucket": "verbumquest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771041487257:android:6a1cc6a47a41ae4baa4b08",
+        "android_client_info": {
+          "package_name": "com.example.verbumquest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771041487257-8286t4bet08n5oit2c41a7h44mm5ob76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCqnlUmhabQUUoKeizpUubvy76n4hiWYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771041487257-8286t4bet08n5oit2c41a7h44mm5ob76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
