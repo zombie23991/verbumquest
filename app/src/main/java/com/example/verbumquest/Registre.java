@@ -49,12 +49,12 @@ public class Registre extends AppCompatActivity {
                 String contrassenya = etContrassenya.getText().toString();
 
                 /* VALIDAR LES DADES */
-                /* VALIDACIÓ CORREU ELECTRÒNIC */
+                    /* VALIDACIÓ CORREU ELECTRÒNIC */
                 if(!Patterns.EMAIL_ADDRESS.matcher(correu).matches()){
                     etCorreu.setError("El correu introduït és invàlid");
                     etCorreu.setFocusable(true);
 
-                /* VALIDACÓ CONTRASSENYA */
+                    /* VALIDACÓ CONTRASSENYA */
                 } else if(contrassenya.length() < 6) {
                     etContrassenya.setError("La contrassenya ha de ser de 6 caracters");
                     etContrassenya.setFocusable(true);

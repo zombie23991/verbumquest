@@ -22,15 +22,16 @@ public class MainActivity extends AppCompatActivity {
         BTLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Toast.makeText(MainActivity.this, "Hola", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
             }
         });
 
         BTRegistre.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(MainActivity.this, Registre.class);
-                startActivity(i);
+                Intent intent = new Intent(MainActivity.this, Registre.class);
+                startActivity(intent);
             }
         });
     }

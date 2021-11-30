@@ -19,4 +19,11 @@
     <string name="etContrassenya">Contrassenya</string>
     <string name="etNomUsuari">Nom</string>
     <string name="btRegistre">Registrar-se</string>
+
+    <!--Activity Login-->
+    <string name="etCorreuLogin">Correu electrònic</string>
+    <string name="etContrassenyaLogin">Contrassenya</string>
+    <string name="btLogin">Entrar</string>
+
+
 </resources>

@@ -32,9 +32,5 @@ public class VerbumQuest extends AppCompatActivity {
                 startActivity(intent);
             };
         },DuracioPantalla);
-
-        Intent i = new Intent(VerbumQuest.this, MainActivity.class);
-        startActivity(i);
-
     }
 }
