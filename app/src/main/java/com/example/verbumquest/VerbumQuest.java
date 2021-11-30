@@ -24,7 +24,7 @@ public class VerbumQuest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verbum_quest);
 
-        int DuracioPantalla = 2500;
+        int DuracioPantalla = 4500;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
