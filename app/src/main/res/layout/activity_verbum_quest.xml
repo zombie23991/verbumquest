@@ -36,16 +36,18 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/view2"
-        android:layout_width="414dp"
-        android:layout_height="338dp"
-        android:layout_marginTop="216dp"
+        android:layout_width="346dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="84dp"
         android:adjustViewBounds="false"
         android:background="@drawable/loading"
         android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"></pl.droidsonroids.gif.GifImageView>
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0"></pl.droidsonroids.gif.GifImageView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
