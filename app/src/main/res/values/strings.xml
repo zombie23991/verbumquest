@@ -10,6 +10,13 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
+    <!--Activity Main-->
     <string name="BTLogin">login</string>
     <string name="BTRegistre">registre</string>
+
+    <!--Activity Registre-->
+    <string name="etCorreu">Correu electrònic</string>
+    <string name="etContrassenya">Contrassenya</string>
+    <string name="etNomUsuari">Nom</string>
+    <string name="btRegistre">Registrar-se</string>
 </resources>
