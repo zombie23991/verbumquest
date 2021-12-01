@@ -18,7 +18,7 @@ public class Menu extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseUser user;
 
-    Button TancarSessio;
+    Button jugarBtn, torre, quisom, TancarSessio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,33 @@ public class Menu extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
         TancarSessio = findViewById(R.id.TancarSessio);
+
+        jugarBtn = findViewById(R.id.jugarBtn);
+        torre = findViewById(R.id.torre);
+        quisom = findViewById(R.id.quisom);
+
+        jugarBtn.setOnClickListener(new  View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Toast.makeText(Menu.this, "jugar", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        torre.setOnClickListener(new  View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Toast.makeText(Menu.this, "torre", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        quisom.setOnClickListener(new  View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Toast.makeText(Menu.this, "quisom", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
         TancarSessio.setOnClickListener(new View.OnClickListener() {
             @Override

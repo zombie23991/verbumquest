@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,15 +15,50 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/text"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:src="@drawable/text" />
+
+        <Button
+            android:id="@+id/jugarBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boto_personalitzat"
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
+            android:text="@string/jugarBtn" />
+
+        <Button
+            android:id="@+id/torre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boto_personalitzat"
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
+            android:text="@string/torre" />
+
+        <Button
+            android:id="@+id/quisom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boto_personalitzat"
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
+            android:text="@string/quisom" />
+
         <Button
             android:id="@+id/TancarSessio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#00CA54"
+            android:background="@drawable/boto_personalitzat"
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
             android:text="@string/TancarSessio" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-</RelativeLayout>
+</ScrollView>

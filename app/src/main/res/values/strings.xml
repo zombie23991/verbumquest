@@ -26,6 +26,19 @@
     <string name="btLogin">Entrar</string>
 
     <!--Menu-->
+    <string name="jugarBtn">Jugar</string>
+    <string name="torre">Modo torre</string>
+    <string name="quisom">Sobre nosaltres</string>
     <string name="TancarSessio">Tancar sessió</string>
+
+    <!--Perfil Jugador-->
+    <string name="nom">--</string>
+    <string name="puntuaciototal">--</string>
+    <string name="correu">--</string>
+
+    <!--torre-->
+    <string name="lvl1">lvl1</string>
+    <string name="puntuacio">--</string>
+    <string name="uid">--</string>
 
 </resources>
