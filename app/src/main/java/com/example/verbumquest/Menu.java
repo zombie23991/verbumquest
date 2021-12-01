@@ -3,6 +3,7 @@ package com.example.verbumquest;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,11 +28,22 @@ public class Menu extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
+
+        //Ubicacio
+        String ubicacio = "fonts/pixel.ttf";
+        Typeface Tf = Typeface.createFromAsset(Menu.this.getAssets(), ubicacio);
+
         TancarSessio = findViewById(R.id.TancarSessio);
 
         jugarBtn = findViewById(R.id.jugarBtn);
         torre = findViewById(R.id.torre);
         quisom = findViewById(R.id.quisom);
+
+        TancarSessio.setTypeface(Tf);
+        jugarBtn.setTypeface(Tf);
+        torre.setTypeface(Tf);
+        quisom.setTypeface(Tf);
+
 
         jugarBtn.setOnClickListener(new  View.OnClickListener(){
             @Override
