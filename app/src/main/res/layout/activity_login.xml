@@ -1,32 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/fonsgradient"
     tools:context=".Login">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="377dp"
+        android:layout_height="294dp"
+        android:layout_marginBottom="4dp"
+        android:animationCache="true"
+        android:baselineAligned="false"
         android:gravity="center"
-        android:padding="30dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.0">
 
         <!--CORREU ELECTRÒNIC D'USUARI-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:helperTextEnabled="false">
 
             <EditText
                 android:id="@+id/etCorreuLogin"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="56dp"
+                android:layout_margin="0dp"
+                android:background="#93BADD"
+                android:drawableLeft="@android:drawable/sym_action_email"
+                android:drawablePadding="10dp"
                 android:hint="@string/etCorreuLogin"
                 android:importantForAutofill="no"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                tools:ignore="SpeakableTextPresentCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!--CONTRASSENYA D'USUARI-->
@@ -37,11 +52,16 @@
 
             <EditText
                 android:id="@+id/etContrassenyaLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="357dp"
+                android:layout_height="55dp"
+                android:layout_margin="10dp"
+                android:background="#93BADD"
+                android:drawableStart="@android:drawable/ic_lock_idle_lock"
+                android:drawablePadding="10dp"
                 android:hint="@string/etContrassenyaLogin"
                 android:importantForAutofill="no"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                tools:ignore="SpeakableTextPresentCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,11 +70,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:backgroundTintMode="src_in"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            android:background="#00CA54"
-            android:text="@string/btLogin" />
+            android:shadowRadius="50.300"
+            android:text="@string/btLogin"
+            app:icon="@android:drawable/button_onoff_indicator_off" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="341dp"
+        android:layout_height="279dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/dragonacademy" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="308dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
