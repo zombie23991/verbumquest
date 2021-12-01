@@ -4,11 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/drawable/ic_launcher_background.xml" value="0.12916666666666668" />
-        <entry key="..\:/Users/marpo/Desktop/Aplicacions/CFGS/Segon Curs/MP15 Projectes DUAL/Projecte 3 Verbum Quest/Projecte Android Studio Verbum Quest/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/marpo/Desktop/Aplicacions/CFGS/Segon Curs/MP15 Projectes DUAL/Projecte 3 Verbum Quest/Projecte Android Studio Verbum Quest/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/marpo/Desktop/Aplicacions/CFGS/Segon Curs/MP15 Projectes DUAL/Projecte 3 Verbum Quest/Projecte Android Studio Verbum Quest/app/src/main/res/layout/activity_menu.xml" value="0.14375" />
-        <entry key="..\:/Users/marpo/Desktop/Aplicacions/CFGS/Segon Curs/MP15 Projectes DUAL/Projecte 3 Verbum Quest/Projecte Android Studio Verbum Quest/app/src/main/res/layout/activity_registre.xml" value="0.1" />
-        <entry key="..\:/Users/marpo/Desktop/Aplicacions/CFGS/Segon Curs/MP15 Projectes DUAL/Projecte 3 Verbum Quest/Projecte Android Studio Verbum Quest/app/src/main/res/layout/activity_verbum_quest.xml" value="0.14375" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_menu.xml" value="0.2" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_verbum_quest.xml" value="0.12239583333333333" />
+        <entry key="..\:/Users/alber/Desktop/CFGS/2n Curs/verbumquest/app/src/main/res/layout/activity_main.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/alber/Desktop/CFGS/2n Curs/verbumquest/app/src/main/res/layout/activity_verbum_quest.xml" value="0.264" />
       </map>
     </option>
   </component>

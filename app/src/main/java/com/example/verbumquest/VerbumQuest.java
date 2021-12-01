@@ -28,7 +28,7 @@ public class VerbumQuest extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(VerbumQuest.this,MainActivity.class);
+                Intent intent = new Intent(VerbumQuest.this,Menu.class);
                 startActivity(intent);
             };
         },DuracioPantalla);

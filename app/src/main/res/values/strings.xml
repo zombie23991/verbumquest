@@ -25,5 +25,7 @@
     <string name="etContrassenyaLogin">Contrassenya</string>
     <string name="btLogin">Entrar</string>
 
+    <!--Menu-->
+    <string name="TancarSessio">Tancar sessió</string>
 
 </resources>
