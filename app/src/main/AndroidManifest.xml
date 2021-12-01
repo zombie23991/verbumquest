@@ -12,6 +12,15 @@
         android:largeHeap="true"
         android:theme="@style/Theme.VerbumQuest" >
         <activity
+            android:name=".Login"
+            android:exported="true" />
+        <activity
+            android:name=".Menu"
+            android:exported="true" />
+        <activity
+            android:name=".Registre"
+            android:exported="true" />
+        <activity
             android:name=".VerbumQuest"
             android:exported="true">
             <intent-filter>
@@ -20,10 +29,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
