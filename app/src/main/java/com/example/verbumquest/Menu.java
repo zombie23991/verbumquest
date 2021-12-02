@@ -63,7 +63,8 @@ public class Menu extends AppCompatActivity {
         quisom.setOnClickListener(new  View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Toast.makeText(Menu.this, "quisom", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Menu.this, Quisom.class);
+                startActivity(intent);
             }
         });
 

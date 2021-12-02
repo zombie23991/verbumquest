@@ -18,6 +18,12 @@
             android:name=".perfil"
             android:exported="true" />
         <activity
+            android:name=".Torre"
+            android:exported="true" />
+        <activity
+            android:name=".Quisom"
+            android:exported="true" />
+        <activity
             android:name=".Menu"
             android:exported="true" />
         <activity
