@@ -91,7 +91,7 @@ public class Registre extends AppCompatActivity {
                             dadesJugador.put("Contrassenya", stContrassenya);
                             dadesJugador.put("Nom Usuari", stNomUsuari);
 
-                            FirebaseDatabase database = FirebaseDatabase.getInstance(); //INSTANCIAMENT BASE DE DADES
+                            FirebaseDatabase database = FirebaseDatabase.getInstance(); // INSTANCIAMENT BASE DE DADES
                             DatabaseReference reference = database.getReference("Verbum Quest Database"); // NOM DE LA BASE DE DADES
                             reference.child(stUid).setValue(dadesJugador);
 
