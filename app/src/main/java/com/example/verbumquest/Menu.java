@@ -49,7 +49,8 @@ public class Menu extends AppCompatActivity {
         jugarBtn.setOnClickListener(new  View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Toast.makeText(Menu.this, "jugar", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Menu.this, Disenymapa.class);
+                startActivity(intent);
             }
         });
 
