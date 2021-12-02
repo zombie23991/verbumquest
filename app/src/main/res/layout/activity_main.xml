@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#AB1A4BDF"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="1000dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="126dp"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="70dp">
@@ -20,20 +28,65 @@
         <!--Registre-->
         <Button
             android:id="@+id/BTLogin"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#00CA54"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:backgroundTintMode="src_in"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:shadowRadius="50.300"
             android:text="@string/BTLogin" />
 
         <Button
             android:id="@+id/BTRegistre"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:background="#00CA54"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:backgroundTintMode="src_in"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:shadowRadius="50.300"
             android:text="@string/BTRegistre" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="350dp"
+        android:layout_height="129dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="191dp"
+        android:fontFamily="monospace"
+        android:text="Registre't per a poder guardar la teva puntuació i competir contra els teus amics!"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="137dp"
+        android:layout_height="169dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="554dp"
+        android:layout_marginBottom="7dp"
+        app:srcCompat="@drawable/adventurer" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="296dp"
+        android:layout_height="149dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        app:srcCompat="@drawable/text" />
 
 
 </RelativeLayout>
