@@ -52,6 +52,16 @@
             android:text="@string/quisom" />
 
         <Button
+            android:id="@+id/usuari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boto_personalitzat"
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
+            android:textSize="30dp"
+            android:text="@string/usuari" />
+
+        <Button
             android:id="@+id/TancarSessio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

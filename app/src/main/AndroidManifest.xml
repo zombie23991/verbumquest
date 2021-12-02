@@ -15,6 +15,9 @@
             android:name=".Login"
             android:exported="true" />
         <activity
+            android:name=".perfil"
+            android:exported="true" />
+        <activity
             android:name=".Menu"
             android:exported="true" />
         <activity

@@ -7,32 +7,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".perfil">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-46dp"
+        tools:layout_editor_absoluteY="-47dp">
+
+        <TextView
+            android:id="@+id/titol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titol"
+            android:textSize="50dp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/nom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nom" />
+            android:layout_marginTop="10dp"
+            android:text="@string/nom"
+            android:textColor="#000000"
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/correu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/correu" />
+            android:layout_marginTop="10dp"
+            android:text="@string/correu"
+            android:textColor="#000000"
+            android:textSize="30dp" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:adjustViewBounds="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/adventurer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </pl.droidsonroids.gif.GifImageView>
 
         <TextView
             android:id="@+id/puntuaciototal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/puntuaciototal" />
-
+            android:layout_marginTop="10dp"
+            android:text="@string/puntuaciototal"
+            android:textColor="#000000"
+            android:textSize="30dp" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>

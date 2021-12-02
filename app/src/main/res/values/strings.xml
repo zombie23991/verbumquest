@@ -29,9 +29,11 @@
     <string name="jugarBtn">Jugar</string>
     <string name="torre">Modo torre</string>
     <string name="quisom">Sobre nosaltres</string>
+    <string name="usuari">Perfil</string>
     <string name="TancarSessio">Tancar sessió</string>
 
     <!--Perfil Jugador-->
+    <string name="titol">Perfil</string>
     <string name="nom">--</string>
     <string name="puntuaciototal">--</string>
     <string name="correu">--</string>
