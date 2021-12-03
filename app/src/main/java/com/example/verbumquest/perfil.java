@@ -54,15 +54,19 @@ public class perfil extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot ds : snapshot.getChildren()){
-                    // S'OBTENEN LES DADES DE LA BASE DE DADES
-                    String stPuntuacio = ""+ds.child("Puntuacio").getValue();
-                    String stCorreu = ""+ds.child("Correu").getValue();
-                    String stNomUsuari = ""+ds.child("Nom Usuari").getValue();
+                    Usuari perfilUsuari = snapshot.getValue(Usuari.class);
 
-                    // S'ASSIGNEN LES DADES ALS TEXTVIEWS
-                    tvPuntuacioTotal.setText(stPuntuacio);
-                    tvCorreu.setText(stCorreu);
-                    tvNomUsuari.setText(stNomUsuari);
+                    if(perfilUsuari != null){
+                        // S'OBTENEN LES DADES DE LA BASE DE DADES
+                        String stPuntuacio = ""+ds.child("Puntuacio").getValue();
+                        String stCorreu = ""+ds.child("Correu").getValue();
+                        String stNomUsuari = ""+ds.child("Nom Usuari").getValue();
+
+                        // S'ASSIGNEN LES DADES ALS TEXTVIEWS
+                        tvPuntuacioTotal.setText(stPuntuacio);
+                        tvCorreu.setText(stCorreu);
+                        tvNomUsuari.setText(stNomUsuari);
+                    }
 
                 }
 
@@ -70,7 +74,7 @@ public class perfil extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(perfil.this, "No furula eh", Toast.LENGTH_SHORT).show();
             }
         });
     }
