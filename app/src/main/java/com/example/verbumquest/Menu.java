@@ -49,7 +49,7 @@ public class Menu extends AppCompatActivity {
         jugarBtn.setOnClickListener(new  View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(Menu.this, Disenymapa.class);
+                Intent intent = new Intent(Menu.this, Mapa.class);
                 startActivity(intent);
             }
         });

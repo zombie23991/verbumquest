@@ -15,7 +15,6 @@ public class Mapa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa);
 
-        //val recycler = findViewById<RecyclerView>(R.id.recyclr)
 
     }
 

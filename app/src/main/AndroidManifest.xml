@@ -15,7 +15,7 @@
             android:name=".Login"
             android:exported="true" />
         <activity
-            android:name=".Disenymapa"
+            android:name=".Mapa"
             android:exported="true" />
         <activity
             android:name=".perfil"
