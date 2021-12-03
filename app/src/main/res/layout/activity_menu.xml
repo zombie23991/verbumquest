@@ -1,78 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/fonsverbum"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/linearLayoutCompat2"
+        android:layout_width="328dp"
+        android:layout_height="448dp"
         android:gravity="center"
-        android:orientation="vertical">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/text"
-            android:layout_width="400dp"
-            android:layout_height="200dp"
-            android:src="@drawable/text" />
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.683">
 
         <Button
             android:id="@+id/jugarBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:background="@drawable/boto_personalitzat"
+            android:backgroundTintMode="src_over"
+            android:text="@string/jugarBtn"
             android:textColor="#ffffff"
-            android:layout_marginTop="10dp"
-            android:textSize="30dp"
-            android:text="@string/jugarBtn" />
+            android:textSize="30dp" />
 
         <Button
             android:id="@+id/torre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:background="@drawable/boto_personalitzat"
+            android:text="@string/torre"
             android:textColor="#ffffff"
-            android:layout_marginTop="10dp"
-            android:textSize="30dp"
-            android:text="@string/torre" />
+            android:textSize="30dp" />
 
         <Button
             android:id="@+id/quisom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:background="@drawable/boto_personalitzat"
+            android:text="@string/quisom"
             android:textColor="#ffffff"
-            android:layout_marginTop="10dp"
-            android:textSize="30dp"
-            android:text="@string/quisom" />
+            android:textSize="30dp" />
 
         <Button
             android:id="@+id/usuari"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:background="@drawable/boto_personalitzat"
+            android:text="@string/usuari"
             android:textColor="#ffffff"
-            android:layout_marginTop="10dp"
-            android:textSize="30dp"
-            android:text="@string/usuari" />
+            android:textSize="30dp" />
 
         <Button
             android:id="@+id/TancarSessio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:background="@drawable/boto_personalitzat"
+            android:text="@string/TancarSessio"
             android:textColor="#ffffff"
-            android:layout_marginTop="10dp"
-            android:textSize="30dp"
-            android:text="@string/TancarSessio" />
+            android:textSize="30dp" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/text" />
 
-</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

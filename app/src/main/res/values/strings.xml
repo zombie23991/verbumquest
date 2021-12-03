@@ -27,8 +27,8 @@
 
     <!--Menu-->
     <string name="jugarBtn">Jugar</string>
-    <string name="torre">Modo torre</string>
-    <string name="quisom">Sobre nosaltres</string>
+    <string name="torre">Mode torre</string>
+    <string name="quisom">About Us</string>
     <string name="usuari">Perfil</string>
     <string name="TancarSessio">Tancar sessió</string>
 
