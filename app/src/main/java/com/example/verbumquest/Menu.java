@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -63,8 +64,8 @@ public class Menu extends AppCompatActivity {
         quisom.setOnClickListener(new  View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(Menu.this, Quisom.class);
-                startActivity(intent);
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dragonfactory.cat/about-us/"));
+                        startActivity(browserIntent);
             }
         });
 

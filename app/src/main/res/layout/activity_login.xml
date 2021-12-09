@@ -35,12 +35,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_margin="0dp"
-                android:background="#93BADD"
                 android:drawableLeft="@android:drawable/sym_action_email"
                 android:drawablePadding="10dp"
                 android:hint="@string/etCorreuLogin"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
+
                 tools:ignore="SpeakableTextPresentCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,7 +55,6 @@
                 android:layout_width="357dp"
                 android:layout_height="55dp"
                 android:layout_margin="10dp"
-                android:background="#93BADD"
                 android:drawableStart="@android:drawable/ic_lock_idle_lock"
                 android:drawablePadding="10dp"
                 android:hint="@string/etContrassenyaLogin"

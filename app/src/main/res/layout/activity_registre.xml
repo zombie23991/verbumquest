@@ -27,11 +27,13 @@
                 android:layout_width="357dp"
                 android:layout_height="55dp"
                 android:layout_margin="10dp"
+                android:backgroundTintMode="src_in"
                 android:drawableLeft="@android:drawable/ic_menu_myplaces"
                 android:drawablePadding="5dp"
                 android:hint="@string/etNomUsuari"
                 android:importantForAutofill="no"
-                android:inputType="text" />
+                android:inputType="text"
+                android:singleLine="false" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
