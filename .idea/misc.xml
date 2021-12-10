@@ -5,15 +5,20 @@
       <map>
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/drawable/boto_personalitzat.xml" value="0.264" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/drawable/ic_launcher_background.xml" value="0.12916666666666668" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_detail.xml" value="0.1" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_disenymapa.xml" value="0.25" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_list.xml" value="0.1" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_mapa.xml" value="0.2" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_menu.xml" value="0.2" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_monpla.xml" value="0.2" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_perfil.xml" value="0.264" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_quisom.xml" value="0.4" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_torre.xml" value="0.1" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_verbum_quest.xml" value="0.12239583333333333" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/item_list_view.xml" value="0.1" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/item_nivell.xml" value="0.6" />
         <entry key="..\:/Users/alber/Desktop/CFGS/2n Curs/verbumquest/app/src/main/res/layout/activity_main.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/alber/Desktop/CFGS/2n Curs/verbumquest/app/src/main/res/layout/activity_verbum_quest.xml" value="0.264" />
       </map>

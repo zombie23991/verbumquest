@@ -18,6 +18,9 @@
             android:name=".Mapa"
             android:exported="true" />
         <activity
+            android:name=".MonPla"
+            android:exported="true" />
+        <activity
             android:name=".perfil"
             android:exported="true" />
         <activity
@@ -35,6 +38,7 @@
         <activity
             android:name=".VerbumQuest"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
