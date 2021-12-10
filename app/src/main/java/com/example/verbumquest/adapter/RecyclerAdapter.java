@@ -1,6 +1,7 @@
 package com.example.verbumquest.adapter;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.verbumquest.JocAvtivity;
 import com.example.verbumquest.R;
 import com.example.verbumquest.model.ItemList;
 
@@ -41,6 +43,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
         holder.imgStarThree.setImageResource(item.getImgStarThree());
         holder.tvNpreguntes.setText(item.getNpreguntes());
         holder.tvTitol.setText(item.getTitol());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(holder.itemView.getContext(), JocAvtivity.class);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
