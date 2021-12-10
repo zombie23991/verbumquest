@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="100dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/imgResource"
+            android:layout_width="101dp"
+            android:layout_height="109dp"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="false"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="1.0"></pl.droidsonroids.gif.GifImageView>
+
+        <LinearLayout
+            android:layout_width="201dp"
+            android:layout_height="107dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNpreguntes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="54dp"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgStarTwo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/imgStarThree"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/imgStarOne"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:scaleType="centerInside" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

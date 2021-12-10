@@ -43,4 +43,9 @@
     <string name="puntuacio">--</string>
     <string name="uid">--</string>
 
+    <!--mon-->
+    <string name="mon1">Camp</string>
+    <string name="mon2">Bosc</string>
+    <string name="mon3">Desert</string>
+
 </resources>
