@@ -14,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Mapa extends AppCompatActivity {
 
     Button mon1;
+    Button mon2;
 
 
     @Override
@@ -22,11 +23,20 @@ public class Mapa extends AppCompatActivity {
         setContentView(R.layout.activity_mapa);
 
         mon1 = findViewById(R.id.mon1);
+        mon2 = findViewById(R.id.mon2);
 
         mon1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Mapa.this, MonPla.class);
+                startActivity(intent);
+            }
+        });
+
+        mon2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Mapa.this, monSelva.class);
                 startActivity(intent);
             }
         });
