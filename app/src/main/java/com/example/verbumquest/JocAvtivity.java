@@ -1,32 +1,40 @@
 package com.example.verbumquest;
 
+import android.content.ClipData;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.verbumquest.adapter.RecyclerAdapter;
+import com.example.verbumquest.model.ItemList;
+
+import pl.droidsonroids.gif.GifImageView;
 
 public class JocAvtivity extends AppCompatActivity {
+    private GifImageView imgResource;
+
+    //obtenir items de la llista
+    private ItemList detallItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_monpla);
+        setContentView(R.layout.activity_joc);
         setTitle(getClass().getSimpleName());
 
-        //Per cridar cuncions del XML
         initViews();
         initValues();
     }
 
-    //Declarar vistas
-    private void initViews() {
-
+    private void initViews(){
+        imgResource = findViewById(R.id.gifEnemic);
     }
 
-    //Declarar valors
-    private void initValues() {
+    private void initValues(){
+        detallItem = (ItemList) getIntent().getExtras().getSerializable("detallItem");
 
+        //extreure la informacio del Recycler View a la pantalla
+        imgResource.setImageResource(detallItem.getImgResource());
     }
 }

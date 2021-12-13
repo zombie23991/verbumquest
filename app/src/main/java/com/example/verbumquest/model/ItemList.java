@@ -2,7 +2,9 @@ package com.example.verbumquest.model;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ItemList  {
+import java.io.Serializable;
+
+public class ItemList  implements Serializable {
     private String titol;
     private String npreguntes;
     private int imgResource;

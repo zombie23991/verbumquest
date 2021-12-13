@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.verbumquest.JocAvtivity;
+import com.example.verbumquest.Mapa;
+import com.example.verbumquest.MonPla;
 import com.example.verbumquest.R;
 import com.example.verbumquest.model.ItemList;
 
@@ -48,7 +50,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(holder.itemView.getContext(), JocAvtivity.class);
-                holder.itemView.getContext().startActivity(intent);
+               intent.putExtra("detallItem", item);
+               holder.itemView.getContext().startActivity(intent);
             }
         });
     }
