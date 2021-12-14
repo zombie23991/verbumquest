@@ -1,6 +1,7 @@
 package com.example.verbumquest;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.GridLayout;
@@ -30,6 +31,15 @@ public class MonPla extends AppCompatActivity {
         //Crida de procesos
         initViews();
         initValues();
+    }
+
+    public void getBackgroumd() {
+        Intent intent = getIntent();
+        int numerobackground = intent.getIntExtra("IntBackgroundSelva" , 0);
+
+        if(numerobackground == 1) {
+
+        }
     }
 
     //Declarar vistas

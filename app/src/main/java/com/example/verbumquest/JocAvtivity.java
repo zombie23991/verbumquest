@@ -2,6 +2,7 @@ package com.example.verbumquest;
 
 import android.content.ClipData;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class JocAvtivity extends AppCompatActivity {
     private GifImageView imgResource;
+    private ImageView fons;
 
     //obtenir items de la llista
     private ItemList detallItem;

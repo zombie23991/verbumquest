@@ -1,6 +1,7 @@
 package com.example.verbumquest;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -10,13 +11,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Menu extends AppCompatActivity {
-
-
     FirebaseAuth auth;
     FirebaseUser user;
 
@@ -58,7 +58,8 @@ public class Menu extends AppCompatActivity {
         torre.setOnClickListener(new  View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Toast.makeText(Menu.this, "torre", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Menu.this, Torre.class);
+                startActivity(intent);
             }
         });
 

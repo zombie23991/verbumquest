@@ -21,7 +21,6 @@ public class monSelva extends AppCompatActivity {
     private RecyclerAdapter adapter;
     private List<ItemList> items;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

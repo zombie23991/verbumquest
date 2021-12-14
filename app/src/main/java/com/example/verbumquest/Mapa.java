@@ -15,6 +15,7 @@ public class Mapa extends AppCompatActivity {
 
     Button mon1;
     Button mon2;
+    Integer num;
 
 
     @Override
