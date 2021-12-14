@@ -34,6 +34,12 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/mundo"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
                 android:id="@+id/tvTitol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

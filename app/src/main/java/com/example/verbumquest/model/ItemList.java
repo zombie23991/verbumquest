@@ -7,6 +7,7 @@ import java.io.Serializable;
 public class ItemList  implements Serializable {
     private String titol;
     private String npreguntes;
+    private String mundo;
     private int imgResource;
     private int imgStarOne;
     private int imgStarTwo;
@@ -15,17 +16,22 @@ public class ItemList  implements Serializable {
 
     //Creem els getters per extreure informació
     //El ordre sera com es tindra que declarar al crear un nivell
-    public ItemList(String titol, String npreguntes,int imgResource, int imgStarOne, int imgStarTwo, int imgStarThree) {
+    public ItemList(String mundo ,String titol, String npreguntes,int imgResource, int imgStarOne, int imgStarTwo, int imgStarThreen) {
         this.titol = titol;
         this.npreguntes = npreguntes;
         this.imgResource = imgResource;
         this.imgStarOne = imgStarOne;
         this.imgStarTwo = imgStarTwo;
         this.imgStarThree = imgStarThree;
+        this.mundo = mundo;
     }
 
     public String getTitol() {
         return titol;
+    }
+
+    public String getMundo() {
+        return mundo;
     }
 
     public String getNpreguntes() {

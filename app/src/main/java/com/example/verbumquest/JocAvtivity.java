@@ -3,8 +3,10 @@ package com.example.verbumquest;
 import android.content.ClipData;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.verbumquest.adapter.RecyclerAdapter;
@@ -14,7 +16,8 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class JocAvtivity extends AppCompatActivity {
     private GifImageView imgResource;
-    private ImageView fons;
+    private ConstraintLayout fons;
+    private TextView mundo;
 
     //obtenir items de la llista
     private ItemList detallItem;
@@ -24,12 +27,26 @@ public class JocAvtivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joc);
         setTitle(getClass().getSimpleName());
+        fons = findViewById(R.id.fons);
 
         initViews();
         initValues();
+        escenari();
+    }
+
+    private void escenari(){
+
+        if(mundo.getText().equals("Esplanada")){
+            fons.setBackgroundResource(R.drawable.esplanada);
+        }else if(mundo.getText().equals("Bosc")){
+            fons.setBackgroundResource(R.drawable.bosc);
+        }else if(mundo.getText().equals("Desert")){
+            fons.setBackgroundResource(R.drawable.casa);
+        }
     }
 
     private void initViews(){
+        mundo = findViewById(R.id.mundo);
         imgResource = findViewById(R.id.gifEnemic);
     }
 
@@ -38,5 +55,6 @@ public class JocAvtivity extends AppCompatActivity {
 
         //extreure la informacio del Recycler View a la pantalla
         imgResource.setImageResource(detallItem.getImgResource());
+        mundo.setText(detallItem.getMundo());
     }
 }
