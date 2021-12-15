@@ -41,7 +41,9 @@ public class JocAvtivity extends AppCompatActivity {
         }else if(mundo.getText().equals("Bosc")){
             fons.setBackgroundResource(R.drawable.bosc);
         }else if(mundo.getText().equals("Desert")){
-            fons.setBackgroundResource(R.drawable.casa);
+            fons.setBackgroundResource(R.drawable.desert);
+        }else if(mundo.getText().equals("Torre")){
+            fons.setBackgroundResource(R.drawable.torre);
         }
     }
 
