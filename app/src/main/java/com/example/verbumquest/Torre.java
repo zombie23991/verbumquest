@@ -45,11 +45,7 @@ public class Torre extends AppCompatActivity {
     private List<ItemList> getItems() {
         List<ItemList> itemLists = new ArrayList<>();
 
-        itemLists.add(new ItemList("Torre","Lvl 1", "Preguntes totals: 10", R.drawable.slime,R.drawable.star, R.drawable.star, R.drawable.star));
-        itemLists.add(new ItemList("Torre","Lvl 2", "Preguntes totals: 10", R.drawable.adventurer,R.drawable.star, R.drawable.star, R.drawable.star));
-        itemLists.add(new ItemList("Torre","Lvl 3", "Preguntes totals: 10", R.drawable.skeleton,R.drawable.star, R.drawable.star, R.drawable.star));
-        itemLists.add(new ItemList("Torre","Lvl 4", "Preguntes totals: 10", R.drawable.adventurer,R.drawable.star, R.drawable.star, R.drawable.star));
-        itemLists.add(new ItemList("Torre","Lvl 5", "Preguntes totals: 10", R.drawable.slime,R.drawable.star, R.drawable.star, R.drawable.star));
+        itemLists.add(new ItemList("Torre","Lvl 1", "Preguntes totals: 10", R.drawable.minotaur,R.drawable.star, R.drawable.star, R.drawable.star));
         return itemLists;
     }
 
