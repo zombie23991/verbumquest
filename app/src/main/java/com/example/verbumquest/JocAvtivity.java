@@ -28,10 +28,13 @@ public class JocAvtivity extends AppCompatActivity {
     private ArrayList<preguntes> questionList;
     private TextView tvQuestions, tvScore, tvTimer, tvQuestionNo;
     private Button b1, b2,b3,b4;
+    private int contador = 5;
+    public jugador jugador = new jugador(3);
+    public enemic enemic = new enemic(5);
+    private int videsJugador , videsEnemic;
     Random random;
     int currentScore = 0, questionAttempted = 1, currentPos;
 
-    //obtenir items de la llista
     private ItemList detallItem;
 
     @Override
@@ -43,60 +46,116 @@ public class JocAvtivity extends AppCompatActivity {
         initViews();
         initValues();
 
-        questionList = new ArrayList();
-        tvQuestions = findViewById(R.id.pregunta);
-        b1 = findViewById(R.id.resposta1);
-        b2 = findViewById(R.id.resposta2);
-        b3 = findViewById(R.id.resposta3);
-        b4 = findViewById(R.id.resposta4);
-        random = new Random();
-        addQuestions(questionList);
-        currentPos = random.nextInt(questionList.size());
-        setDataToViews(currentPos);
-
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(questionList.get(currentPos).getCorrectAnsNo().equals(b1.getText().toString())) {
-                    currentPos = random.nextInt(questionList.size());
-                    setDataToViews(currentPos);
+            questionList = new ArrayList();
+            tvQuestions = findViewById(R.id.pregunta);
+            b1 = findViewById(R.id.resposta1);
+            b2 = findViewById(R.id.resposta2);
+            b3 = findViewById(R.id.resposta3);
+            b4 = findViewById(R.id.resposta4);
+            random = new Random();
+            addQuestions(questionList);
+            currentPos = random.nextInt(questionList.size());
+            setDataToViews(currentPos);
+        //do {
+            b1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (questionList.get(currentPos).getCorrectAnsNo().equals(b1.getText().toString())) {
+                        enemic.setVides(enemic.getVides() - 1 );
+                        contador++;
+                        if(enemic.getVides() >= 0 || contador <= 0) {
+                            currentPos = random.nextInt(questionList.size());
+                            setDataToViews(currentPos);
+                        }
+                        else {
+                            finish();
+                        }
+                    } else {
+                        if(jugador.getVides() == 1) {
+                            jugador.setVides(jugador.getVides() - 1);
+                            finish();
+                        } else {
+                            jugador.setVides(jugador.getVides() - 1);
+                        }
+                    }
                 }
-            }
-        });
+            });
 
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(questionList.get(currentPos).getCorrectAnsNo().equals(b2.getText().toString())) {
-                    currentPos = random.nextInt(questionList.size());
-                    setDataToViews(currentPos);
+            b2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (questionList.get(currentPos).getCorrectAnsNo().equals(b2.getText().toString())) {
+                        enemic.setVides(enemic.getVides() - 1 );
+                        contador++;
+                        if(enemic.getVides() >= 0 || contador < 0) {
+                            currentPos = random.nextInt(questionList.size());
+                            setDataToViews(currentPos);
+                        }
+                        else {
+                            finish();
+                        }
+                    } else {
+                        if(jugador.getVides() == 1) {
+                            jugador.setVides(jugador.getVides() - 1);
+                            finish();
+                        } else {
+                            jugador.setVides(jugador.getVides() - 1);
+                        }
+                    }
                 }
-            }
-        });
+            });
 
-        b3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(questionList.get(currentPos).getCorrectAnsNo().equals(b3.getText().toString())) {
-                    currentPos = random.nextInt(questionList.size());
-                    setDataToViews(currentPos);
+            b3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (questionList.get(currentPos).getCorrectAnsNo().equals(b3.getText().toString())) {
+                        enemic.setVides(enemic.getVides() - 1 );
+                        contador++;
+                        if(enemic.getVides() >= 0 || contador < 0) {
+                            currentPos = random.nextInt(questionList.size());
+                            setDataToViews(currentPos);
+                        }
+                        else {
+                            finish();
+                        }
+                    } else {
+                        if(jugador.getVides() == 1) {
+                            jugador.setVides(jugador.getVides() - 1);
+                            finish();
+                        } else {
+                            jugador.setVides(jugador.getVides() - 1);
+                        }
+                    }
                 }
-            }
-        });
+            });
 
 
-        b4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(questionList.get(currentPos).getCorrectAnsNo().equals(b4.getText().toString())) {
-                    currentPos = random.nextInt(questionList.size());
-                    setDataToViews(currentPos);
+            b4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (questionList.get(currentPos).getCorrectAnsNo().equals(b4.getText().toString())) {
+                        enemic.setVides(enemic.getVides() - 1 );
+                        contador++;
+                        if(enemic.getVides() >= 0 || contador < 0) {
+                            currentPos = random.nextInt(questionList.size());
+                            setDataToViews(currentPos);
+                        }
+                        else {
+                            finish();
+                        }
+                    } else {
+                        if(jugador.getVides() == 1) {
+                            jugador.setVides(jugador.getVides() - 1);
+                            finish();
+                        } else {
+                            jugador.setVides(jugador.getVides() - 1);
+                        }
+                    }
                 }
-            }
-        });
-
-
-    }
+            });
+        }
+//while (jugador.getVides() > 0 || enemic.getVides() > 0 || contador <= 10);
+   // }
 
     private void setDataToViews(int currentPos) {
         tvQuestions.setText(questionList.get(currentPos).getQuestion());
