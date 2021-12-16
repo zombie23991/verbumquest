@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
 
     Button BTLogin, BTRegistre;
@@ -20,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
         BTLogin = findViewById(R.id.BTLogin);
         BTRegistre = findViewById(R.id.BTRegistre);
 
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Usuaris");
 
+        myRef.setValue("Hello, eeeeeee!");
 
         BTLogin.setOnClickListener(new View.OnClickListener(){
             @Override
