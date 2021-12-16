@@ -33,7 +33,7 @@ public class JocAvtivity extends AppCompatActivity {
     private int contador = 5;
     public jugador jugador = new jugador(3);
     public enemic enemic = new enemic(5);
-    private int videsJugador , videsEnemic;
+
     Random random;
     int currentScore = 0, questionAttempted = 1, currentPos;
 
@@ -70,6 +70,8 @@ public class JocAvtivity extends AppCompatActivity {
                     if(enemic.getVides() >= 0 || contador <= 0) {
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
+                        resetejarBotons();
+
                     }
                     else {
                         finish();
@@ -79,6 +81,7 @@ public class JocAvtivity extends AppCompatActivity {
                         jugador.setVides(jugador.getVides() - 1);
                         finish();
                     } else {
+                        b1.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
                         jugador.setVides(jugador.getVides() - 1);
                     }
                 }
@@ -88,12 +91,14 @@ public class JocAvtivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (questionList.get(currentPos).getCorrectAnsNo().equals(b2.getText().toString())) {
                     enemic.setVides(enemic.getVides() - 1 );
                     contador++;
                     if(enemic.getVides() >= 0 || contador < 0) {
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
+                        resetejarBotons();
                     }
                     else {
                         finish();
@@ -103,6 +108,7 @@ public class JocAvtivity extends AppCompatActivity {
                         jugador.setVides(jugador.getVides() - 1);
                         finish();
                     } else {
+                        b2.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
                         jugador.setVides(jugador.getVides() - 1);
                     }
                 }
@@ -112,12 +118,14 @@ public class JocAvtivity extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (questionList.get(currentPos).getCorrectAnsNo().equals(b3.getText().toString())) {
                     enemic.setVides(enemic.getVides() - 1 );
                     contador++;
                     if(enemic.getVides() >= 0 || contador < 0) {
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
+                        resetejarBotons();
                     }
                     else {
                         finish();
@@ -127,6 +135,7 @@ public class JocAvtivity extends AppCompatActivity {
                         jugador.setVides(jugador.getVides() - 1);
                         finish();
                     } else {
+                        b3.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
                         jugador.setVides(jugador.getVides() - 1);
                     }
                 }
@@ -137,12 +146,14 @@ public class JocAvtivity extends AppCompatActivity {
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (questionList.get(currentPos).getCorrectAnsNo().equals(b4.getText().toString())) {
                     enemic.setVides(enemic.getVides() - 1 );
                     contador++;
                     if(enemic.getVides() >= 0 || contador < 0) {
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
+                        resetejarBotons();
                     }
                     else {
                         finish();
@@ -152,6 +163,7 @@ public class JocAvtivity extends AppCompatActivity {
                         jugador.setVides(jugador.getVides() - 1);
                         finish();
                     } else {
+                        b4.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
                         jugador.setVides(jugador.getVides() - 1);
                     }
                 }
@@ -174,6 +186,13 @@ public class JocAvtivity extends AppCompatActivity {
         questionList.add(new preguntes("C is correct", "A" , "B" , "C" ,  "D" ,"C"));
         questionList.add(new preguntes("D is correct", "A" , "B" , "C" ,  "D" ,"D"));
 
+    }
+
+    private void resetejarBotons() {
+        b1.setBackgroundResource(R.drawable.boto_personalitzat_preguntes);
+        b2.setBackgroundResource(R.drawable.boto_personalitzat_preguntes);
+        b3.setBackgroundResource(R.drawable.boto_personalitzat_preguntes);
+        b4.setBackgroundResource(R.drawable.boto_personalitzat_preguntes);
     }
 
     private void escenari(){

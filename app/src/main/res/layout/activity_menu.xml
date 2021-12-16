@@ -44,16 +44,6 @@
             android:textSize="30dp" />
 
         <Button
-            android:id="@+id/usuari"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/boto_personalitzat"
-            android:text="@string/usuari"
-            android:textColor="#ffffff"
-            android:textSize="30dp" />
-
-        <Button
             android:id="@+id/TancarSessio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,18 +68,6 @@
         app:srcCompat="@drawable/text" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="424dp"
-        android:layout_height="41dp"
-        android:backgroundTint="#359AAC"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
         android:id="@+id/quisom"
         android:layout_width="55dp"
         android:layout_height="56dp"
@@ -101,10 +79,9 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2"
-        app:layout_constraintVertical_bias="0.304" />
+        app:layout_constraintVertical_bias="0.555" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
