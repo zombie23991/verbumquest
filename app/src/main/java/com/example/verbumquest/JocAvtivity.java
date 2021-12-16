@@ -24,6 +24,7 @@ import java.util.Random;
 import pl.droidsonroids.gif.GifImageView;
 
 public class JocAvtivity extends AppCompatActivity {
+    private ImageView imgLiveOne, imgLiveTwo, imgLiveThree, imgEvilLive1, imgEvilLive2, imgEvilLive3, imgEvilLive4, imgEvilLive5;
     private GifImageView imgResource;
     private ConstraintLayout fons;
     private TextView mundo;
@@ -47,9 +48,23 @@ public class JocAvtivity extends AppCompatActivity {
         setTitle(getClass().getSimpleName());
         fons = findViewById(R.id.fons);
 
+        //vides del protagonista
+        imgLiveOne = findViewById(R.id.imgLiveOne);
+        imgLiveTwo = findViewById(R.id.imgLiveTwo);
+        imgLiveThree = findViewById(R.id.imgLiveThree);
+
+        //vides del enemic
+        imgEvilLive1 = findViewById(R.id.imgEvilLive1);
+        imgEvilLive2 = findViewById(R.id.imgEvilLive2);
+        imgEvilLive3 = findViewById(R.id.imgEvilLive3);
+        imgEvilLive4 = findViewById(R.id.imgEvilLive4);
+        imgEvilLive5 = findViewById(R.id.imgEvilLive5);
+
+        vidas();
         initViews();
         initValues();
         escenari();
+
         questionList = new ArrayList();
         tvQuestions = findViewById(R.id.pregunta);
         b1 = findViewById(R.id.resposta1);
@@ -68,6 +83,7 @@ public class JocAvtivity extends AppCompatActivity {
                     enemic.setVides(enemic.getVides() - 1 );
                     contador++;
                     if(enemic.getVides() >= 0 || contador <= 0) {
+                        restarvidasenemic();
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
                         resetejarBotons();
@@ -79,10 +95,12 @@ public class JocAvtivity extends AppCompatActivity {
                 } else {
                     if(jugador.getVides() == 1) {
                         jugador.setVides(jugador.getVides() - 1);
+                        restarvidasprota();
                         finish();
                     } else {
                         b1.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
                         jugador.setVides(jugador.getVides() - 1);
+                        restarvidasprota();
                     }
                 }
             }
@@ -96,6 +114,7 @@ public class JocAvtivity extends AppCompatActivity {
                     enemic.setVides(enemic.getVides() - 1 );
                     contador++;
                     if(enemic.getVides() >= 0 || contador < 0) {
+                        restarvidasenemic();
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
                         resetejarBotons();
@@ -106,10 +125,12 @@ public class JocAvtivity extends AppCompatActivity {
                 } else {
                     if(jugador.getVides() == 1) {
                         jugador.setVides(jugador.getVides() - 1);
+                        restarvidasprota();
                         finish();
                     } else {
                         b2.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
                         jugador.setVides(jugador.getVides() - 1);
+                        restarvidasprota();
                     }
                 }
             }
@@ -123,6 +144,7 @@ public class JocAvtivity extends AppCompatActivity {
                     enemic.setVides(enemic.getVides() - 1 );
                     contador++;
                     if(enemic.getVides() >= 0 || contador < 0) {
+                        restarvidasenemic();
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
                         resetejarBotons();
@@ -133,10 +155,12 @@ public class JocAvtivity extends AppCompatActivity {
                 } else {
                     if(jugador.getVides() == 1) {
                         jugador.setVides(jugador.getVides() - 1);
+                        restarvidasprota();
                         finish();
                     } else {
                         b3.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
                         jugador.setVides(jugador.getVides() - 1);
+                        restarvidasprota();
                     }
                 }
             }
@@ -151,6 +175,7 @@ public class JocAvtivity extends AppCompatActivity {
                     enemic.setVides(enemic.getVides() - 1 );
                     contador++;
                     if(enemic.getVides() >= 0 || contador < 0) {
+                        restarvidasenemic();
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
                         resetejarBotons();
@@ -161,10 +186,12 @@ public class JocAvtivity extends AppCompatActivity {
                 } else {
                     if(jugador.getVides() == 1) {
                         jugador.setVides(jugador.getVides() - 1);
+                        restarvidasprota();
                         finish();
                     } else {
                         b4.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
                         jugador.setVides(jugador.getVides() - 1);
+                        restarvidasprota();
                     }
                 }
             }
@@ -206,6 +233,49 @@ public class JocAvtivity extends AppCompatActivity {
         }else if(mundo.getText().equals("Torre")){
             fons.setBackgroundResource(R.drawable.torre);
         }
+    }
+
+    private void restarvidasprota(){
+
+        if(jugador.getVides() == 0){
+        imgLiveOne.setImageResource(R.drawable.heartoff);}
+        else if(jugador.getVides() == 1){
+        imgLiveTwo.setImageResource(R.drawable.heartoff);}
+        else if(jugador.getVides() == 2){
+        imgLiveThree.setImageResource(R.drawable.heartoff);}
+
+    }
+
+    private void restarvidasenemic(){
+
+        if(enemic.getVides() == 4) {
+            imgEvilLive5.setImageResource(R.drawable.heartoff);
+        }else if(enemic.getVides() == 3){
+            imgEvilLive4.setImageResource(R.drawable.heartoff);
+        }else if(enemic.getVides() == 2) {
+            imgEvilLive3.setImageResource(R.drawable.heartoff);
+        }else if(enemic.getVides() == 1) {
+            imgEvilLive2.setImageResource(R.drawable.heartoff);
+        }else if(enemic.getVides() == 0) {
+            imgEvilLive1.setImageResource(R.drawable.heartoff);
+        }
+
+    }
+
+    private void vidas(){
+        //Insertar vidas al inici del joc
+        //protagonista
+        imgLiveOne.setImageResource(R.drawable.hearton);
+        imgLiveTwo.setImageResource(R.drawable.hearton);
+        imgLiveThree.setImageResource(R.drawable.hearton);
+
+        //enemic
+        imgEvilLive1.setImageResource(R.drawable.heartevil);
+        imgEvilLive2.setImageResource(R.drawable.heartevil);
+        imgEvilLive3.setImageResource(R.drawable.heartevil);
+        imgEvilLive4.setImageResource(R.drawable.heartevil);
+        imgEvilLive5.setImageResource(R.drawable.heartevil);
+
     }
 
     private void initViews(){
