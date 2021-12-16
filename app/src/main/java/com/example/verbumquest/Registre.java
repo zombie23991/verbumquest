@@ -78,7 +78,6 @@ public class Registre extends AppCompatActivity {
                 } else{
                     Toast.makeText(Registre.this, "Has de completar tots els camps.", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
     }
