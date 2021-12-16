@@ -35,7 +35,7 @@ public class JocAvtivity extends AppCompatActivity {
     }
 
     private void escenari(){
-
+//comentari
         if(mundo.getText().equals("Esplanada")){
             fons.setBackgroundResource(R.drawable.esplanada);
         }else if(mundo.getText().equals("Bosc")){
