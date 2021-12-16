@@ -39,20 +39,21 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
     @Override
     public void onBindViewHolder(@NonNull RecyclerHolder holder, int position) {
         ItemList item = items.get(position);
+
         holder.imgResource.setImageResource(item.getImgResource());
         holder.imgStarOne.setImageResource(item.getImgStarOne());
         holder.imgStarTwo.setImageResource(item.getImgStarTwo());
         holder.imgStarThree.setImageResource(item.getImgStarThree());
         holder.tvNpreguntes.setText(item.getNpreguntes());
+        holder.mundo.setText(item.getMundo());
         holder.tvTitol.setText(item.getTitol());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(holder.itemView.getContext(), JocAvtivity.class);
-               intent.putExtra("detallItem", item);
-               holder.itemView.getContext().startActivity(intent);
-            }
+                intent.putExtra("detallItem", item);
+                holder.itemView.getContext().startActivity(intent);}
         });
     }
 
@@ -73,6 +74,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
         //Text titol i nº preguntes
         private TextView tvTitol;
         private TextView tvNpreguntes;
+        private TextView mundo;
 
         public RecyclerHolder(@NonNull View itemView) {
             super(itemView);
@@ -84,6 +86,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
 
             tvTitol = itemView.findViewById(R.id.tvTitol);
             tvNpreguntes = itemView.findViewById(R.id.tvNpreguntes);
+            mundo = itemView.findViewById(R.id.mundo);
         }
     }
 

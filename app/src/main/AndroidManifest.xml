@@ -15,6 +15,9 @@
             android:name=".monSelva"
             android:exported="true" />
         <activity
+            android:name=".monDesert"
+            android:exported="true" />
+        <activity
             android:name=".Login"
             android:exported="true" />
         <activity

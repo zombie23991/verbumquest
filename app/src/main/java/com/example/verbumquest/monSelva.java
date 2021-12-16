@@ -50,11 +50,8 @@ public class monSelva extends AppCompatActivity {
     private List<ItemList> getItems() {
         List<ItemList> itemLists = new ArrayList<>();
 
-        itemLists.add(new ItemList("Lvl 1", "Preguntes totals: 10", R.drawable.slime, R.drawable.star, R.drawable.star, R.drawable.star));
-        itemLists.add(new ItemList("Lvl 2", "Preguntes totals: 10", R.drawable.adventurer, R.drawable.star, R.drawable.star, R.drawable.star));
-        itemLists.add(new ItemList("Lvl 3", "Preguntes totals: 10", R.drawable.skeleton, R.drawable.star, R.drawable.star, R.drawable.star));
-        itemLists.add(new ItemList("Lvl 4", "Preguntes totals: 10", R.drawable.adventurer, R.drawable.star, R.drawable.star, R.drawable.star));
-        itemLists.add(new ItemList("Lvl 5", "Preguntes totals: 10", R.drawable.slime, R.drawable.star, R.drawable.star, R.drawable.star));
+        itemLists.add(new ItemList("Bosc","Lvl 1", "Preguntes totals: 10", R.drawable.skeleton, R.drawable.star, R.drawable.star, R.drawable.star));
+        itemLists.add(new ItemList("Bosc","Lvl 2", "Preguntes totals: 10", R.drawable.minitree, R.drawable.star, R.drawable.star, R.drawable.star));
         return itemLists;
     }
 }

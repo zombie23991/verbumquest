@@ -15,7 +15,7 @@ public class Mapa extends AppCompatActivity {
 
     Button mon1;
     Button mon2;
-    Integer num;
+    Button mon3;
 
 
     @Override
@@ -25,6 +25,7 @@ public class Mapa extends AppCompatActivity {
 
         mon1 = findViewById(R.id.mon1);
         mon2 = findViewById(R.id.mon2);
+        mon3 = findViewById(R.id.mon3);
 
         mon1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +39,14 @@ public class Mapa extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Mapa.this, monSelva.class);
+                startActivity(intent);
+            }
+        });
+
+        mon3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Mapa.this, monDesert.class);
                 startActivity(intent);
             }
         });
