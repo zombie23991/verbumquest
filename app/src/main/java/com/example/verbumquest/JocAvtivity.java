@@ -158,7 +158,6 @@ public class JocAvtivity extends AppCompatActivity {
             }
         });
     }
-ç
 
     private void setDataToViews(int currentPos) {
         tvQuestions.setText(questionList.get(currentPos).getQuestion());
