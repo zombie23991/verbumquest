@@ -16,7 +16,7 @@ public class ItemList  implements Serializable {
 
     //Creem els getters per extreure informació
     //El ordre sera com es tindra que declarar al crear un nivell
-    public ItemList(String mundo ,String titol, String npreguntes,int imgResource, int imgStarOne, int imgStarTwo, int imgStarThreen) {
+    public ItemList(String mundo ,String titol, String npreguntes,int imgResource, int imgStarOne, int imgStarTwo, int imgStarThree) {
         this.titol = titol;
         this.npreguntes = npreguntes;
         this.imgResource = imgResource;

@@ -16,7 +16,7 @@
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/imgResource"
-            android:layout_width="101dp"
+            android:layout_width="104dp"
             android:layout_height="109dp"
             android:layout_marginRight="10dp"
             android:adjustViewBounds="false"
@@ -29,7 +29,7 @@
             app:layout_constraintVertical_bias="1.0"></pl.droidsonroids.gif.GifImageView>
 
         <LinearLayout
-            android:layout_width="192dp"
+            android:layout_width="199dp"
             android:layout_height="107dp"
             android:orientation="vertical">
 
@@ -55,32 +55,40 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="54dp"
-            android:layout_height="108dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imgStarTwo"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
+                android:layout_width="39dp"
+                android:layout_height="29dp"
                 android:layout_marginRight="10dp"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:scaleType="centerInside" />
 
             <ImageView
                 android:id="@+id/imgStarThree"
-                android:layout_width="match_parent"
+                android:layout_width="39dp"
                 android:layout_height="25dp"
                 android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:scaleType="centerInside" />
+                android:layout_weight="2"
+
+                android:adjustViewBounds="false"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintVertical_bias="1.0" />
 
             <ImageView
                 android:id="@+id/imgStarOne"
-                android:layout_width="match_parent"
+                android:layout_width="39dp"
                 android:layout_height="25dp"
                 android:layout_marginRight="10dp"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:scaleType="centerInside" />
 
         </LinearLayout>
