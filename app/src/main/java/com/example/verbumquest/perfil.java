@@ -16,27 +16,34 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.net.Authenticator;
 
 public class perfil extends AppCompatActivity {
 
-    FirebaseDatabase firebaseDatabase;
     DatabaseReference VerbumQuest;
+    FirebaseDatabase fbd; //VARIABLE BASE DE DADES DES DE FIREBASE
+    FirebaseFirestore fstore;
+    FirebaseAuth auth; //AUTENTICACIÓ FIREBASE
 
-    TextView titol,nom ,correu, puntuaciototal;
+    TextView titol, nom ,correu, puntuaciototal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        VerbumQuest = firebaseDatabase .getReference("VerbumQuest");
+        auth = FirebaseAuth.getInstance();
+        fstore = FirebaseFirestore.getInstance();
+        fbd = FirebaseDatabase.getInstance();
+
+        FirebaseUser user = auth.getCurrentUser();
 
     }
 
     private void Consulta(){
+
     }
 
 
