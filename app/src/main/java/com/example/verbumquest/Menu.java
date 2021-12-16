@@ -41,7 +41,7 @@ public class Menu extends AppCompatActivity {
         quisom = findViewById(R.id.quisom);
        // usuari = findViewById(R.id.usuari);
 
-        usuari.setTypeface(Tf);
+       // usuari.setTypeface(Tf);
         TancarSessio.setTypeface(Tf);
         jugarBtn.setTypeface(Tf);
         torre.setTypeface(Tf);
@@ -71,13 +71,13 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-        usuari.setOnClickListener(new View.OnClickListener(){
+        /*usuari.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(Menu.this, perfil.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         TancarSessio.setOnClickListener(new View.OnClickListener() {
             @Override

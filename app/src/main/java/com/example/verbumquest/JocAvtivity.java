@@ -82,7 +82,7 @@ public class JocAvtivity extends AppCompatActivity {
                 if (questionList.get(currentPos).getCorrectAnsNo().equals(b1.getText().toString())) {
                     enemic.setVides(enemic.getVides() - 1 );
                     contador++;
-                    if(enemic.getVides() >= 0 || contador <= 0) {
+                    if(enemic.getVides() > 0 || contador <= 0) {
                         restarvidasenemic();
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
@@ -113,7 +113,7 @@ public class JocAvtivity extends AppCompatActivity {
                 if (questionList.get(currentPos).getCorrectAnsNo().equals(b2.getText().toString())) {
                     enemic.setVides(enemic.getVides() - 1 );
                     contador++;
-                    if(enemic.getVides() >= 0 || contador < 0) {
+                    if(enemic.getVides() > 0 || contador < 0) {
                         restarvidasenemic();
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
@@ -143,7 +143,7 @@ public class JocAvtivity extends AppCompatActivity {
                 if (questionList.get(currentPos).getCorrectAnsNo().equals(b3.getText().toString())) {
                     enemic.setVides(enemic.getVides() - 1 );
                     contador++;
-                    if(enemic.getVides() >= 0 || contador < 0) {
+                    if(enemic.getVides() > 0 || contador < 0) {
                         restarvidasenemic();
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
@@ -174,7 +174,7 @@ public class JocAvtivity extends AppCompatActivity {
                 if (questionList.get(currentPos).getCorrectAnsNo().equals(b4.getText().toString())) {
                     enemic.setVides(enemic.getVides() - 1 );
                     contador++;
-                    if(enemic.getVides() >= 0 || contador < 0) {
+                    if(enemic.getVides() > 0 || contador < 0) {
                         restarvidasenemic();
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
