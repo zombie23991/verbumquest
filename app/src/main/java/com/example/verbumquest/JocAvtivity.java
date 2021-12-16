@@ -158,8 +158,7 @@ public class JocAvtivity extends AppCompatActivity {
             }
         });
     }
-//while (jugador.getVides() > 0 || enemic.getVides() > 0 || contador <= 10);
-    // }
+ç
 
     private void setDataToViews(int currentPos) {
         tvQuestions.setText(questionList.get(currentPos).getQuestion());
