@@ -32,10 +32,10 @@
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941"></pl.droidsonroids.gif.GifImageView>
+        app:layout_constraintVertical_bias="0.935"></pl.droidsonroids.gif.GifImageView>
 
     <TextView
         android:id="@+id/textView2"

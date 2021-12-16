@@ -56,7 +56,6 @@ public class MonPla extends AppCompatActivity {
         itemLists.add(new ItemList("Esplanada","Lvl 2", "Preguntes totals: 10", R.drawable.minitree,R.drawable.star, R.drawable.star, R.drawable.star));
         itemLists.add(new ItemList("Esplanada","Lvl 3", "Preguntes totals: 10", R.drawable.skeleton,R.drawable.star, R.drawable.star, R.drawable.star));
         itemLists.add(new ItemList("Esplanada","Lvl 4", "Preguntes totals: 10", R.drawable.minifire,R.drawable.star, R.drawable.star, R.drawable.star));
-        itemLists.add(new ItemList("Esplanada","Lvl 5", "Preguntes totals: 10", R.drawable.minotaur,R.drawable.star, R.drawable.star, R.drawable.star));
         return itemLists;
     }
 
