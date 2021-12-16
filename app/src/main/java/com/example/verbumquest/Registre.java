@@ -1,9 +1,13 @@
 package com.example.verbumquest;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -12,11 +16,14 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,6 +35,7 @@ public class Registre extends AppCompatActivity {
     FirebaseAuth auth; //AUTENTICACIÓ FIREBASE
     DatabaseReference baseDades; // REFERENCIA A LA BASE DE DADES
     FirebaseDatabase fbd; //VARIABLE BASE DE DADES DES DE FIREBASE
+    FirebaseFirestore fstore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +49,11 @@ public class Registre extends AppCompatActivity {
         Registrar = findViewById(R.id.btRegistre);
 
         auth = FirebaseAuth.getInstance();
+        fstore = FirebaseFirestore.getInstance();
         fbd = FirebaseDatabase.getInstance();
 
-        //PROVA PER A COMPROVAR QUE ES MODIFIQUI LA BASE DE DADES (NO FUNCIONA)
-        /* FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Usuaris");
-        myRef.setValue("Hello, eeeeeee!"); */
-
         baseDades = fbd.getReference("Usuaris"); // INSTANCIAMENT BASE DE DADES + NOM DE LA BASE DE DADES
+
         Registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -92,6 +97,7 @@ public class Registre extends AppCompatActivity {
                             String stContrassenya = etContrassenya.getText().toString();
                             String stNomUsuari = etNomUsuari.getText().toString();
 
+                            DocumentReference documentReference = fstore.collection("Usuaris").document(stUid);
                             Map<String,Object> dadesJugador = new HashMap<>();
 
                             dadesJugador.put("Uid", stUid);
@@ -99,24 +105,20 @@ public class Registre extends AppCompatActivity {
                             dadesJugador.put("Contrassenya", stContrassenya);
                             dadesJugador.put("Nom Usuari", stNomUsuari);
 
-                            Usuari u = new Usuari(stUid,stCorreu,stContrassenya,stNomUsuari);
-                            baseDades.setValue(u);
-                            Toast.makeText(Registre.this, "L'usuari s'ha registrat amb èxit", Toast.LENGTH_SHORT).show();
-                            finish();
-
-                            /*baseDades.child("Usuaris").child(stUid).setValue(dadesJugador).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            documentReference.set(dadesJugador).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
-                                public void onComplete(@NonNull Task<Void> task2) {
-                                    if(task2.isSuccessful()){
-                                        startActivity(new Intent(Registre.this, Menu.class));
-                                        Toast.makeText(Registre.this, "L'usuari s'ha registrat amb èxit", Toast.LENGTH_SHORT).show();
-                                        finish();
-                                    } else {
-                                        Toast.makeText(Registre.this, "Hmm Hmm ha petat", Toast.LENGTH_SHORT).show();
-                                    }
+                                public void onSuccess(@NonNull Void unused) {
+                                    Log.d(TAG, "onSuccess: El perfil de l'usuari s'ha creat per a l'usuari " + stUid);
+                                    startActivity(new Intent(Registre.this, Menu.class));
+                                    Toast.makeText(Registre.this, "L'usuari s'ha registrat amb èxit", Toast.LENGTH_SHORT).show();
+                                    finish();
                                 }
-                            });*/
-
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Log.d(TAG, "onFailure: " + e.toString());
+                                }
+                            });
 
                         } else {
                             Toast.makeText(Registre.this, "Hi ha hagut un problema", Toast.LENGTH_SHORT).show();
