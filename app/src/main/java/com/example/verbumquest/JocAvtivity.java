@@ -208,11 +208,15 @@ public class JocAvtivity extends AppCompatActivity {
     }
 
     private void addQuestions(ArrayList<preguntes> questionList) {
-        questionList.add(new preguntes("A is correct", "A" , "B" , "C" , "D" , "A"));
-        questionList.add(new preguntes("B is correct", "A" , "B" , "C" ,  "D" ,"B"));
-        questionList.add(new preguntes("C is correct", "A" , "B" , "C" ,  "D" ,"C"));
-        questionList.add(new preguntes("D is correct", "A" , "B" , "C" ,  "D" ,"D"));
-
+        questionList.add(new preguntes("Assenyala, la 2a persona del singular del Present de Subjuntiu del verb cantar:", "cantéssis" , "cantaves" , "cantis" , "cantares" , "cantis"));
+        questionList.add(new preguntes("Assenyala, la 3a persona del plural de l'Imperfet de l'Indicatiu del verb dormir:", "dormien" , "dormissin" , "dormien" ,  "dormirien" ,"dormien"));
+        questionList.add(new preguntes("Quin és el gerundi del verb beure?", "begut" , "bevent" , "beguent" ,  "bevut" ,"bevent"));
+        questionList.add(new preguntes("Assenyala, la 1a persona del plural del Passat Simple del verb somiar:", "somiàvem" , "somiàrem" , "somiéssim" ,  "somiaríem" ,"somiàrem"));
+        questionList.add(new preguntes("Assenyala, la 3a persona del singular de l'Imperfet de subjuntiu del verb tenir:", "tingués" , "tingui" , "tenia" ,  "tinguesin" ,"tingués"));
+        questionList.add(new preguntes("Assenyala, la 2a persona del plural del Passat simple del verb fer:", "vau fer" , "féreu" , "fèieu" ,  "féssiu" ,"féreu"));
+        questionList.add(new preguntes("Assenyala, la 3a persona del plural de l'Imperfet de subjuntiu del verb creure:", "creiéssin" , "creieren" , "creien" ,  "creguessin" ,"creguessin"));
+        questionList.add(new preguntes("Assenyala, la 1a persona del plural del Futur de l'Indicatiu del verb moure:", "moguerem" , "moverem" , "mourem" ,  "mouríem" ,"mourem"));
+        questionList.add(new preguntes("Quina d'aquestes conjugacions del verb pair està MAL ESCRITA?", "Cuit/a" , "Courut" , "Coent" ,  "Courut" ,"Cuit/a"));
     }
 
     private void resetejarBotons() {
