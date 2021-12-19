@@ -9,12 +9,11 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifProta"
-        android:layout_width="124dp"
-        android:layout_height="193dp"
+        android:layout_width="172dp"
+        android:layout_height="164dp"
         android:layout_marginRight="10dp"
         android:adjustViewBounds="false"
         android:scaleType="centerInside"
-        android:src="@drawable/adventurerfight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.118"
