@@ -2,6 +2,7 @@ package com.example.verbumquest;
 
 import android.content.ClipData;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -32,12 +33,12 @@ public class JocAvtivity extends AppCompatActivity {
     private TextView tvQuestions, tvScore, tvTimer, tvQuestionNo;
     private Button b1, b2,b3,b4;
     private int contador = 5;
+    private GifImageView gifprota;
     public jugador jugador = new jugador(3);
     public enemic enemic = new enemic(5);
-
     Random random;
-    int currentScore = 0, questionAttempted = 1, currentPos;
 
+    int currentScore = 0, questionAttempted = 1, currentPos;
     //obtenir items de la llista
     private ItemList detallItem;
 
@@ -47,6 +48,7 @@ public class JocAvtivity extends AppCompatActivity {
         setContentView(R.layout.activity_joc);
         setTitle(getClass().getSimpleName());
         fons = findViewById(R.id.fons);
+        gifprota = findViewById(R.id.gifProta);
 
         //vides del protagonista
         imgLiveOne = findViewById(R.id.imgLiveOne);
@@ -60,6 +62,7 @@ public class JocAvtivity extends AppCompatActivity {
         imgEvilLive4 = findViewById(R.id.imgEvilLive4);
         imgEvilLive5 = findViewById(R.id.imgEvilLive5);
 
+        protagonista();
         vidas();
         initViews();
         initValues();
@@ -81,14 +84,15 @@ public class JocAvtivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (questionList.get(currentPos).getCorrectAnsNo().equals(b1.getText().toString())) {
                     enemic.setVides(enemic.getVides() - 1 );
+                    executarAttackJugador();
                     contador++;
                     if(enemic.getVides() > 0 || contador <= 0) {
                         restarvidasenemic();
                         currentPos = random.nextInt(questionList.size());
                         setDataToViews(currentPos);
                         resetejarBotons();
-
                     }
+
                     else {
                         finish();
                     }
@@ -112,6 +116,7 @@ public class JocAvtivity extends AppCompatActivity {
 
                 if (questionList.get(currentPos).getCorrectAnsNo().equals(b2.getText().toString())) {
                     enemic.setVides(enemic.getVides() - 1 );
+                    executarAttackJugador();
                     contador++;
                     if(enemic.getVides() > 0 || contador < 0) {
                         restarvidasenemic();
@@ -142,6 +147,7 @@ public class JocAvtivity extends AppCompatActivity {
 
                 if (questionList.get(currentPos).getCorrectAnsNo().equals(b3.getText().toString())) {
                     enemic.setVides(enemic.getVides() - 1 );
+                    executarAttackJugador();
                     contador++;
                     if(enemic.getVides() > 0 || contador < 0) {
                         restarvidasenemic();
@@ -173,6 +179,7 @@ public class JocAvtivity extends AppCompatActivity {
 
                 if (questionList.get(currentPos).getCorrectAnsNo().equals(b4.getText().toString())) {
                     enemic.setVides(enemic.getVides() - 1 );
+                    executarAttackJugador();
                     contador++;
                     if(enemic.getVides() > 0 || contador < 0) {
                         restarvidasenemic();
@@ -235,6 +242,23 @@ public class JocAvtivity extends AppCompatActivity {
         }
     }
 
+    private void executarAttackJugador() {
+        gifprota.setBackgroundResource(R.drawable.adventureratack);
+
+        new CountDownTimer( 3000, 50 ) {
+
+            public void onTick(long millisUntilFinished) {
+
+            }
+            public void onFinish() {
+                gifprota.setBackgroundResource(R.drawable.adventurerrescalat);
+            }
+        }.start();
+    }
+    private void protagonista() {
+        gifprota.setBackgroundResource(R.drawable.adventurerrescalat);
+    }
+
     private void restarvidasprota(){
 
         if(jugador.getVides() == 0){
@@ -281,6 +305,7 @@ public class JocAvtivity extends AppCompatActivity {
     private void initViews(){
         mundo = findViewById(R.id.mundo);
         imgResource = findViewById(R.id.gifEnemic);
+
     }
 
     private void initValues(){
