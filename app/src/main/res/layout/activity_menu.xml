@@ -31,7 +31,7 @@
             android:backgroundTintMode="src_over"
             android:text="@string/jugarBtn"
             android:textColor="#ffffff"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/torre"
@@ -41,7 +41,16 @@
             android:background="@drawable/boto_personalitzat"
             android:text="@string/torre"
             android:textColor="#ffffff"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
+        <Button
+            android:id="@+id/usuari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/boto_personalitzat"
+            android:text="@string/usuari"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/TancarSessio"
@@ -51,7 +60,7 @@
             android:background="@drawable/boto_personalitzat"
             android:text="@string/TancarSessio"
             android:textColor="#ffffff"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>

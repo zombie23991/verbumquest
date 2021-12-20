@@ -20,7 +20,7 @@ public class Menu extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseUser user;
 
-    Button usuari ,jugarBtn, torre, quisom, TancarSessio;
+    Button usuari, jugarBtn, torre, quisom, TancarSessio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +39,9 @@ public class Menu extends AppCompatActivity {
         jugarBtn = findViewById(R.id.jugarBtn);
         torre = findViewById(R.id.torre);
         quisom = findViewById(R.id.quisom);
-       // usuari = findViewById(R.id.usuari);
+        usuari = findViewById(R.id.usuari);
 
-       // usuari.setTypeface(Tf);
+        usuari.setTypeface(Tf);
         TancarSessio.setTypeface(Tf);
         jugarBtn.setTypeface(Tf);
         torre.setTypeface(Tf);
@@ -71,13 +71,13 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-        /*usuari.setOnClickListener(new View.OnClickListener(){
+        usuari.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(Menu.this, perfil.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
         TancarSessio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +95,7 @@ public class Menu extends AppCompatActivity {
         super.onStart();
     }
 
-    //Motodo comproba si jugador a iniciat sesio :)
+    //Metode comproba si jugador ha iniciat sesio :)
     private void UsuariLogin(){
 
         if(user != null){
