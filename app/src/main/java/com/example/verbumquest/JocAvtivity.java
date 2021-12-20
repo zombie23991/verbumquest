@@ -216,6 +216,7 @@ public class JocAvtivity extends AppCompatActivity {
         questionList.add(new preguntes("Assenyala, la 2a persona del plural del Passat simple del verb fer:", "vau fer" , "féreu" , "fèieu" ,  "féssiu" ,"féreu"));
         questionList.add(new preguntes("Assenyala, la 3a persona del plural de l'Imperfet de subjuntiu del verb creure:", "creiéssin" , "creieren" , "creien" ,  "creguessin" ,"creguessin"));
         questionList.add(new preguntes("Assenyala, la 1a persona del plural del Futur de l'Indicatiu del verb moure:", "moguerem" , "moverem" , "mourem" ,  "mouríem" ,"mourem"));
+        questionList.add(new preguntes("A quin temps verbal correspon la 'forma havia cantat'?", "Imperfet d'indicatiu" , "Passat anterior d'indicatiu" , "Perfet d'indicatiu" ,  "Plusquamperfet d'indicatiu" ,"Plusquamperfet d'indicatiu"));
         questionList.add(new preguntes("Quina d'aquestes conjugacions del verb pair està MAL ESCRITA?", "Cuit/a" , "Courut" , "Coent" ,  "Courut" ,"Cuit/a"));
     }
 
