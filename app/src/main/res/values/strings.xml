@@ -34,9 +34,9 @@
 
     <!--Perfil Jugador-->
     <string name="titol">Perfil</string>
-    <string name="nom">--</string>
-    <string name="puntuaciototal">--</string>
-    <string name="correu">--</string>
+    <string name="nom">Nom: </string>
+    <string name="puntuaciototal">Puntuació total: </string>
+    <string name="correu">Correu: </string>
 
     <!--torre-->
     <string name="lvl1">lvl1</string>

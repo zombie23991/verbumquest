@@ -66,10 +66,10 @@ public class perfil extends AppCompatActivity {
                     DocumentSnapshot dadesUsuari = task.getResult();
                     if (dadesUsuari.exists()) {
                         Log.d(TAG, "DocumentSnapshot data: " + dadesUsuari.getData());
-                        tvNom.setText(dadesUsuari.getData().get("Nom Usuari").toString());
-                        tvCorreu.setText(dadesUsuari.getData().get("Correu").toString());
+                        tvNom.append(" " + dadesUsuari.getData().get("Nom Usuari").toString());
+                        tvCorreu.append(" " + dadesUsuari.getData().get("Correu").toString());
                     } else {
-                        Log.d(TAG, "No such document");
+                        Log.d(TAG, "No existeix l'usuari");
                     }
                 } else {
                     Log.d(TAG, "get failed with ", task.getException());
