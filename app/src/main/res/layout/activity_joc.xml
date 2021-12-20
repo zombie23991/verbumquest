@@ -9,17 +9,17 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifProta"
-        android:layout_width="172dp"
-        android:layout_height="164dp"
+        android:layout_width="233dp"
+        android:layout_height="197dp"
         android:layout_marginRight="10dp"
         android:adjustViewBounds="false"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942"></pl.droidsonroids.gif.GifImageView>
+        app:layout_constraintVertical_bias="0.937"></pl.droidsonroids.gif.GifImageView>
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifEnemic"
@@ -169,7 +169,7 @@
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.676" />
+        app:layout_constraintVertical_bias="0.619" />
 
     <ImageView
         android:id="@+id/imgEvilLive1"
@@ -248,7 +248,7 @@
         app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.676" />
+        app:layout_constraintVertical_bias="0.618" />
 
     <ImageView
         android:id="@+id/imgLiveTwo"
@@ -261,7 +261,7 @@
         app:layout_constraintHorizontal_bias="0.196"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.676" />
+        app:layout_constraintVertical_bias="0.618" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
