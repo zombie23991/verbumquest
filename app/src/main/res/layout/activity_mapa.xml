@@ -8,14 +8,19 @@
 
     <Button
         android:id="@+id/mon1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@android:style/Widget.Holo.Light.Button.Inset"
+        android:layout_width="202dp"
+        android:layout_height="71dp"
         android:layout_marginBottom="16dp"
-        android:text="Mon 1"
+        android:text="Esplanada"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        app:layout_constraintVertical_bias="0.511" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -42,6 +47,7 @@
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.75" />
 
@@ -75,10 +81,13 @@
 
     <Button
         android:id="@+id/mon2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@android:style/Widget.Holo.Light.Button.Small"
+        android:layout_width="202dp"
+        android:layout_height="72dp"
         android:layout_marginBottom="4dp"
-        android:text="Mon 2"
+        android:text="Bosc"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
@@ -86,9 +95,12 @@
 
     <Button
         android:id="@+id/mon3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="Mon 3"
+        style="@android:style/Widget.Holo.Light.Button.Inset"
+        android:layout_width="216dp"
+        android:layout_height="77dp"
+        android:text="Desert"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
