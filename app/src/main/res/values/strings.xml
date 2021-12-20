@@ -48,4 +48,7 @@
     <string name="mon2">Bosc</string>
     <string name="mon3">Desert</string>
 
+    <!--joc -->
+    <string name="pregunta">pregunta</string>
+
 </resources>

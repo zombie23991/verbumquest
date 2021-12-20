@@ -1,6 +1,7 @@
 package com.example.verbumquest;
 
 import android.content.ClipData;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +28,7 @@ public class JocAvtivity extends AppCompatActivity {
     private ImageView imgLiveOne, imgLiveTwo, imgLiveThree, imgEvilLive1, imgEvilLive2, imgEvilLive3, imgEvilLive4, imgEvilLive5;
     private GifImageView imgResource;
     private ConstraintLayout fons;
-    private TextView mundo;
+    private TextView mundo, pregunta;
     private ArrayList<preguntes> questionList;
     private TextView tvQuestions, tvScore, tvTimer, tvQuestionNo;
     private Button b1, b2,b3,b4;
@@ -48,6 +49,10 @@ public class JocAvtivity extends AppCompatActivity {
         setTitle(getClass().getSimpleName());
         fons = findViewById(R.id.fons);
 
+        //Ubicacio
+        String ubicacio = "fonts/pixel.ttf";
+        Typeface Tf = Typeface.createFromAsset(JocAvtivity.this.getAssets(), ubicacio);
+
         //vides del protagonista
         imgLiveOne = findViewById(R.id.imgLiveOne);
         imgLiveTwo = findViewById(R.id.imgLiveTwo);
@@ -60,6 +65,10 @@ public class JocAvtivity extends AppCompatActivity {
         imgEvilLive4 = findViewById(R.id.imgEvilLive4);
         imgEvilLive5 = findViewById(R.id.imgEvilLive5);
 
+        //text
+        pregunta = findViewById(R.id.pregunta);
+        mundo = findViewById(R.id.mundo);
+
         vidas();
         initViews();
         initValues();
@@ -67,10 +76,22 @@ public class JocAvtivity extends AppCompatActivity {
 
         questionList = new ArrayList();
         tvQuestions = findViewById(R.id.pregunta);
+
+        //botons de nivell
         b1 = findViewById(R.id.resposta1);
         b2 = findViewById(R.id.resposta2);
         b3 = findViewById(R.id.resposta3);
         b4 = findViewById(R.id.resposta4);
+
+        //passar text a tipus de font lletra
+        pregunta.setTypeface(Tf);
+        mundo.setTypeface(Tf);
+        b1.setTypeface(Tf);
+        b2.setTypeface(Tf);
+        b3.setTypeface(Tf);
+        b4.setTypeface(Tf);
+
+
         random = new Random();
         addQuestions(questionList);
         currentPos = random.nextInt(questionList.size());

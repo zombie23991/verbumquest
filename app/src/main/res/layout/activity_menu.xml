@@ -42,6 +42,15 @@
             android:text="@string/torre"
             android:textColor="#ffffff"
             android:textSize="30dp" />
+        <Button
+            android:id="@+id/usuari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/boto_personalitzat"
+            android:text="@string/usuari"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
 
         <Button
             android:id="@+id/TancarSessio"
