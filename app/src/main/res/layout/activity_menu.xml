@@ -53,17 +53,6 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/Usuari"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/boto_personalitzat"
-            android:text="@string/usuari"
-            android:textColor="#ffffff"
-            android:textSize="30sp" />
-
-
-        <Button
             android:id="@+id/TancarSessio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

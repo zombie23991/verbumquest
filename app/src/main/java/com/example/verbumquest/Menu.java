@@ -39,7 +39,7 @@ public class Menu extends AppCompatActivity {
         jugarBtn = findViewById(R.id.jugarBtn);
         torre = findViewById(R.id.torre);
         quisom = findViewById(R.id.quisom);
-        usuari = findViewById(R.id.Usuari);
+        usuari = findViewById(R.id.usuari);
 
         usuari.setTypeface(Tf);
         TancarSessio.setTypeface(Tf);
