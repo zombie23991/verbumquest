@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/fons_perfil"
     tools:context=".perfil">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -19,20 +18,25 @@
 
         <TextView
             android:id="@+id/titol"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/caixa_border_radius"
+            android:gravity="center"
             android:text="@string/titol"
+            android:textColor="#FFFFFF"
             android:textSize="50dp"
-            android:textColor="#000000"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
 
         <TextView
             android:id="@+id/nom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:background="@drawable/caixa_border_radius"
+            android:paddingLeft="10dp"
             android:text="@string/nom"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="30dp" />
 
         <TextView
@@ -40,8 +44,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:background="@drawable/caixa_border_radius"
+            android:paddingLeft="10dp"
             android:text="@string/correu"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="30dp" />
 
         <pl.droidsonroids.gif.GifImageView
@@ -65,8 +71,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:background="@drawable/caixa_border_radius"
+            android:paddingLeft="10dp"
             android:text="@string/puntuaciototal"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="30dp" />
 
 
