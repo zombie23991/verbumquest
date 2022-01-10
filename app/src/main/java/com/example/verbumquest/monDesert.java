@@ -46,8 +46,8 @@ public class monDesert extends AppCompatActivity {
     //Creacio de nivells
     private List<ItemList> getItems() {
         List<ItemList> itemLists = new ArrayList<>();
-        itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 10", R.drawable.minifire,R.drawable.star, R.drawable.star, R.drawable.star));
-        itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 10", R.drawable.skeleton,R.drawable.star, R.drawable.star, R.drawable.star));
+        itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 10", 0 , false, R.drawable.minifire,R.drawable.star, R.drawable.star, R.drawable.star));
+        itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 10", 0 , false, R.drawable.skeleton,R.drawable.star, R.drawable.star, R.drawable.star));
         return itemLists;
     }
 

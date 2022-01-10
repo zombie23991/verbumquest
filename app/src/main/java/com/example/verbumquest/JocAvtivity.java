@@ -322,6 +322,7 @@ public class JocAvtivity extends AppCompatActivity {
         imgLiveTwo.setImageResource(R.drawable.hearton);
         imgLiveThree.setImageResource(R.drawable.hearton);
 
+
         //enemic
         imgEvilLive1.setImageResource(R.drawable.heartevil);
         imgEvilLive2.setImageResource(R.drawable.heartevil);
