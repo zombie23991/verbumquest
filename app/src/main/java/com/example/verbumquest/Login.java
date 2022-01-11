@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -18,10 +19,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.io.Serializable;
+
 public class Login extends AppCompatActivity {
     EditText etCorreuLogin, etContrassenyaLogin;
     Button btLogin;
     FirebaseAuth auth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,7 @@ public class Login extends AppCompatActivity {
         etContrassenyaLogin = findViewById(R.id.etContrassenyaLogin);
         btLogin = findViewById(R.id.btLogin);
         auth = FirebaseAuth.getInstance();
+
 
         //CLICK EN EL BOTO DE LOGIN
         btLogin.setOnClickListener(new View.OnClickListener() {
