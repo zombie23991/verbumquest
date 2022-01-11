@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="350dp"
-    android:layout_height="300dp"
+    android:layout_height="350dp"
     android:layout_gravity="center"
     android:background="#80393A3A"
     android:gravity="center"
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Fi de la partida"
+        android:text="Has superat el nivell!!!"
         android:textColor="@color/white"
         android:textSize="34sp" />
 

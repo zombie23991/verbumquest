@@ -344,14 +344,24 @@ public class JocAvtivity extends AppCompatActivity {
     }
 
     private void MensajeGameOver(){
+        String ubicacio = "fonts/pixel.ttf";
+        Typeface Tf = Typeface.createFromAsset(JocAvtivity.this.getAssets(), ubicacio);
+
         TextView Fi, punts;
         ImageView imgStarOne, imgStarTwo, imgStarThree;
         Button sortir, reintentar;
 
+
         miDialog.setContentView(R.layout.gameover);
+        miDialog.setCanceledOnTouchOutside(false);
+        miDialog.setCancelable(false);
 
         Fi = miDialog.findViewById(R.id.Fi);
         punts = miDialog.findViewById(R.id.punts);
+
+        //Tranformem el text
+        Fi.setTypeface(Tf);
+        punts.setTypeface(Tf);
 
         imgStarOne = miDialog.findViewById(R.id.imgStarOne);
         imgStarTwo = miDialog.findViewById(R.id.imgStarTwo);
@@ -364,7 +374,10 @@ public class JocAvtivity extends AppCompatActivity {
         imgStarTwo.setImageResource(R.drawable.staroff);
         imgStarThree.setImageResource(R.drawable.staroff);
 
-        if(jugador.getVides() == 1){
+
+        if(jugador.getVides() == 0){
+            Fi.setText("Has perdut, torna ha intentar-ho!");}
+        else if(jugador.getVides() == 1){
             imgStarOne.setImageResource(R.drawable.star);}
         else if(jugador.getVides() == 2){
             imgStarOne.setImageResource(R.drawable.star);
@@ -385,19 +398,21 @@ public class JocAvtivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 miDialog.dismiss();
-                GameOver = true;
-                resetejarBotons();
-                protagonista();
+                GameOver = false;
+                //Treiem i tornem a posar vidas
+                jugador.setVides(jugador.getVides() - jugador.getVides());
+                jugador.setVides(jugador.getVides() + 3);
+                enemic.setVides(enemic.getVides() - enemic.getVides());
+                enemic.setVides(enemic.getVides() + 5);
+                contador = 5;
                 vidas();
+                resetejarBotons();
                 initViews();
                 initValues();
-                escenari();
-
             }
         });
 
         miDialog.show();
-
     }
 
     private void initViews(){
