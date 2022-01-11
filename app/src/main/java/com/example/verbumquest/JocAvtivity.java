@@ -1,5 +1,6 @@
 package com.example.verbumquest;
 
+import android.app.Dialog;
 import android.content.ClipData;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -38,6 +39,9 @@ public class JocAvtivity extends AppCompatActivity {
     public jugador jugador = new jugador(3);
     public enemic enemic = new enemic(5);
 
+    boolean GameOver = false;
+    Dialog miDialog;
+
     Random random;
 
     int currentScore = 0, questionAttempted = 1, currentPos;
@@ -52,6 +56,9 @@ public class JocAvtivity extends AppCompatActivity {
         setTitle(getClass().getSimpleName());
         fons = findViewById(R.id.fons);
         gifprota = findViewById(R.id.gifProta);
+
+        //iniciar dialog
+        miDialog = new Dialog(JocAvtivity.this);
 
         //Ubicacio
         String ubicacio = "fonts/pixel.ttf";
@@ -105,30 +112,30 @@ public class JocAvtivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (questionList.get(currentPos).getCorrectAnsNo().equals(b1.getText().toString())) {
-                    enemic.setVides(enemic.getVides() - 1 );
-                    executarAttackJugador();
-                    contador++;
-                    if(enemic.getVides() > 0 || contador <= 0) {
-                        restarvidasenemic();
-                        currentPos = random.nextInt(questionList.size());
-                        setDataToViews(currentPos);
-                        resetejarBotons();
+                if (!GameOver) {
+                    if (questionList.get(currentPos).getCorrectAnsNo().equals(b1.getText().toString())) {
+                        enemic.setVides(enemic.getVides() - 1);
+                        executarAttackJugador();
+                        contador++;
+                        if (enemic.getVides() > 0 || contador <= 0) {
+                            restarvidasenemic();
+                            currentPos = random.nextInt(questionList.size());
+                            setDataToViews(currentPos);
+                            resetejarBotons();
 
-                    }
-
-                    else {
-                        finish();
-                    }
-                } else {
-                    if(jugador.getVides() == 1) {
-                        jugador.setVides(jugador.getVides() - 1);
-                        restarvidasprota();
-                        finish();
+                        } else {
+                            gameover();
+                        }
                     } else {
-                        b1.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
-                        jugador.setVides(jugador.getVides() - 1);
-                        restarvidasprota();
+                        if (jugador.getVides() == 1) {
+                            jugador.setVides(jugador.getVides() - 1);
+                            restarvidasprota();
+                            gameover();
+                        } else {
+                            b1.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
+                            jugador.setVides(jugador.getVides() - 1);
+                            restarvidasprota();
+                        }
                     }
                 }
             }
@@ -137,29 +144,29 @@ public class JocAvtivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (questionList.get(currentPos).getCorrectAnsNo().equals(b2.getText().toString())) {
-                    enemic.setVides(enemic.getVides() - 1 );
-                    executarAttackJugador();
-                    contador++;
-                    if(enemic.getVides() > 0 || contador < 0) {
-                        restarvidasenemic();
-                        currentPos = random.nextInt(questionList.size());
-                        setDataToViews(currentPos);
-                        resetejarBotons();
-                    }
-                    else {
-                        finish();
-                    }
-                } else {
-                    if(jugador.getVides() == 1) {
-                        jugador.setVides(jugador.getVides() - 1);
-                        restarvidasprota();
-                        finish();
+                if (!GameOver) {
+                    if (questionList.get(currentPos).getCorrectAnsNo().equals(b2.getText().toString())) {
+                        enemic.setVides(enemic.getVides() - 1);
+                        executarAttackJugador();
+                        contador++;
+                        if (enemic.getVides() > 0 || contador < 0) {
+                            restarvidasenemic();
+                            currentPos = random.nextInt(questionList.size());
+                            setDataToViews(currentPos);
+                            resetejarBotons();
+                        } else {
+                            gameover();
+                        }
                     } else {
-                        b2.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
-                        jugador.setVides(jugador.getVides() - 1);
-                        restarvidasprota();
+                        if (jugador.getVides() == 1) {
+                            jugador.setVides(jugador.getVides() - 1);
+                            restarvidasprota();
+                            gameover();
+                        } else {
+                            b2.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
+                            jugador.setVides(jugador.getVides() - 1);
+                            restarvidasprota();
+                        }
                     }
                 }
             }
@@ -168,29 +175,29 @@ public class JocAvtivity extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (questionList.get(currentPos).getCorrectAnsNo().equals(b3.getText().toString())) {
-                    enemic.setVides(enemic.getVides() - 1 );
-                    executarAttackJugador();
-                    contador++;
-                    if(enemic.getVides() > 0 || contador < 0) {
-                        restarvidasenemic();
-                        currentPos = random.nextInt(questionList.size());
-                        setDataToViews(currentPos);
-                        resetejarBotons();
-                    }
-                    else {
-                        finish();
-                    }
-                } else {
-                    if(jugador.getVides() == 1) {
-                        jugador.setVides(jugador.getVides() - 1);
-                        restarvidasprota();
-                        finish();
+                if (!GameOver) {
+                    if (questionList.get(currentPos).getCorrectAnsNo().equals(b3.getText().toString())) {
+                        enemic.setVides(enemic.getVides() - 1);
+                        executarAttackJugador();
+                        contador++;
+                        if (enemic.getVides() > 0 || contador < 0) {
+                            restarvidasenemic();
+                            currentPos = random.nextInt(questionList.size());
+                            setDataToViews(currentPos);
+                            resetejarBotons();
+                        } else {
+                            gameover();
+                        }
                     } else {
-                        b3.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
-                        jugador.setVides(jugador.getVides() - 1);
-                        restarvidasprota();
+                        if (jugador.getVides() == 1) {
+                            jugador.setVides(jugador.getVides() - 1);
+                            restarvidasprota();
+                            gameover();
+                        } else {
+                            b3.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
+                            jugador.setVides(jugador.getVides() - 1);
+                            restarvidasprota();
+                        }
                     }
                 }
             }
@@ -200,29 +207,29 @@ public class JocAvtivity extends AppCompatActivity {
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (questionList.get(currentPos).getCorrectAnsNo().equals(b4.getText().toString())) {
-                    enemic.setVides(enemic.getVides() - 1 );
-                    executarAttackJugador();
-                    contador++;
-                    if(enemic.getVides() > 0 || contador < 0) {
-                        restarvidasenemic();
-                        currentPos = random.nextInt(questionList.size());
-                        setDataToViews(currentPos);
-                        resetejarBotons();
-                    }
-                    else {
-                        finish();
-                    }
-                } else {
-                    if(jugador.getVides() == 1) {
-                        jugador.setVides(jugador.getVides() - 1);
-                        restarvidasprota();
-                        finish();
+                if (!GameOver) {
+                    if (questionList.get(currentPos).getCorrectAnsNo().equals(b4.getText().toString())) {
+                        enemic.setVides(enemic.getVides() - 1);
+                        executarAttackJugador();
+                        contador++;
+                        if (enemic.getVides() > 0 || contador < 0) {
+                            restarvidasenemic();
+                            currentPos = random.nextInt(questionList.size());
+                            setDataToViews(currentPos);
+                            resetejarBotons();
+                        } else {
+                            gameover();
+                        }
                     } else {
-                        b4.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
-                        jugador.setVides(jugador.getVides() - 1);
-                        restarvidasprota();
+                        if (jugador.getVides() == 1) {
+                            jugador.setVides(jugador.getVides() - 1);
+                            restarvidasprota();
+                            gameover();
+                        } else {
+                            b4.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
+                            jugador.setVides(jugador.getVides() - 1);
+                            restarvidasprota();
+                        }
                     }
                 }
             }
@@ -328,6 +335,68 @@ public class JocAvtivity extends AppCompatActivity {
         imgEvilLive3.setImageResource(R.drawable.heartevil);
         imgEvilLive4.setImageResource(R.drawable.heartevil);
         imgEvilLive5.setImageResource(R.drawable.heartevil);
+
+    }
+
+    private void gameover(){
+       GameOver = true;
+       MensajeGameOver();
+    }
+
+    private void MensajeGameOver(){
+        TextView Fi, punts;
+        ImageView imgStarOne, imgStarTwo, imgStarThree;
+        Button sortir, reintentar;
+
+        miDialog.setContentView(R.layout.gameover);
+
+        Fi = miDialog.findViewById(R.id.Fi);
+        punts = miDialog.findViewById(R.id.punts);
+
+        imgStarOne = miDialog.findViewById(R.id.imgStarOne);
+        imgStarTwo = miDialog.findViewById(R.id.imgStarTwo);
+        imgStarThree = miDialog.findViewById(R.id.imgStarThree);
+
+        sortir = miDialog.findViewById(R.id.sortir);
+        reintentar = miDialog.findViewById(R.id.reintentar);
+
+        imgStarOne.setImageResource(R.drawable.staroff);
+        imgStarTwo.setImageResource(R.drawable.staroff);
+        imgStarThree.setImageResource(R.drawable.staroff);
+
+        if(jugador.getVides() == 1){
+            imgStarOne.setImageResource(R.drawable.star);}
+        else if(jugador.getVides() == 2){
+            imgStarOne.setImageResource(R.drawable.star);
+            imgStarTwo.setImageResource(R.drawable.star);}
+        else if(jugador.getVides() == 3){
+            imgStarOne.setImageResource(R.drawable.star);
+            imgStarTwo.setImageResource(R.drawable.star);
+            imgStarThree.setImageResource(R.drawable.star);}
+
+        sortir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        reintentar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                miDialog.dismiss();
+                GameOver = true;
+                resetejarBotons();
+                protagonista();
+                vidas();
+                initViews();
+                initValues();
+                escenari();
+
+            }
+        });
+
+        miDialog.show();
 
     }
 
