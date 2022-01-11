@@ -44,6 +44,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
 
             if (items.get(position).getlocked() == true) {
                 holder.itemView.setEnabled(false);
+
             }
             else {
                 holder.itemView.setEnabled(true);
