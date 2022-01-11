@@ -91,8 +91,6 @@ public class JocAvtivity extends AppCompatActivity {
         initValues();
         escenari();
 
-        questionList = generador.getPreguntes();
-
         tvQuestions = findViewById(R.id.pregunta);
 
         //botons de nivell
@@ -371,7 +369,7 @@ public class JocAvtivity extends AppCompatActivity {
 
 
         if(jugador.getVides() == 0){
-            Fi.setText("Has perdut, torna ha intentar-ho!");}
+            Fi.setText("Has perdut, torna a intentar-ho!");}
         else if(jugador.getVides() == 1){
             imgStarOne.setImageResource(R.drawable.star);}
         else if(jugador.getVides() == 2){
