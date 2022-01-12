@@ -30,9 +30,7 @@ import java.net.Authenticator;
 
 public class perfil extends AppCompatActivity {
 
-    DatabaseReference VerbumQuest;
-    FirebaseDatabase fbd; //VARIABLE BASE DE DADES DES DE FIREBASE
-    FirebaseFirestore fstore;
+    FirebaseFirestore fstore; //VARIABLE BASE DE DADES DES DE FIREBASE
     FirebaseAuth auth; //AUTENTICACIÓ FIREBASE
 
     TextView tvNom, tvCorreu, tvPuntuacio;
@@ -44,7 +42,6 @@ public class perfil extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
-        fbd = FirebaseDatabase.getInstance();
 
         tvNom = findViewById(R.id.nom);
         tvCorreu = findViewById(R.id.correu);

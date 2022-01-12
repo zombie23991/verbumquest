@@ -16,11 +16,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.io.Serializable;
+
 public class Menu extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseUser user;
-
     Button usuari, jugarBtn, torre, quisom, TancarSessio;
+    static public generarPreguntes generador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +87,8 @@ public class Menu extends AppCompatActivity {
                 TancarSessio();
             }
         });
-
+        generador = new generarPreguntes();
+        generador.setPreguntes();
     }
 
     //S'executa quan el joc esta obert
@@ -95,7 +98,7 @@ public class Menu extends AppCompatActivity {
         super.onStart();
     }
 
-    //Metode comproba si jugador ha iniciat sesio :)
+    //Metode comproba si jugador ha iniciat sessio :)
     private void UsuariLogin(){
 
         if(user != null){
