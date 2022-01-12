@@ -9,6 +9,9 @@ public class ItemList  implements Serializable {
     private String npreguntes;
     private String mundo;
     private int imgResource;
+
+
+
     private int imgStarOne;
     private int imgStarTwo;
     private int imgStarThree;
@@ -27,6 +30,7 @@ public class ItemList  implements Serializable {
         this.imgStarThree = imgStarThree;
         this.locked = locked;
         this.mundo = mundo;
+        this.puntuacio = 0;
     }
 
     public String getTitol() {
@@ -71,6 +75,22 @@ public class ItemList  implements Serializable {
 
     public int getImgStarThree() {
         return imgStarThree;
+    }
+
+    public void setImgResource(int imgResource) {
+        this.imgResource = imgResource;
+    }
+
+    public void setImgStarOne(int imgStarOne) {
+        this.imgStarOne = imgStarOne;
+    }
+
+    public void setImgStarTwo(int imgStarTwo) {
+        this.imgStarTwo = imgStarTwo;
+    }
+
+    public void setImgStarThree(int imgStarThree) {
+        this.imgStarThree = imgStarThree;
     }
 
 }

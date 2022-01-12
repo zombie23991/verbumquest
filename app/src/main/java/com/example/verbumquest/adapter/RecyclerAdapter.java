@@ -42,6 +42,24 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
     public void onBindViewHolder(@NonNull RecyclerHolder holder, int position) {
         ItemList item = items.get(position);
 
+        if(item.getPuntuacio() == 1) {
+            item.setImgStarTwo(R.drawable.star);
+        }
+
+        else if (item.getPuntuacio() == 2) {
+            item.setImgStarTwo(R.drawable.star);
+            item.setImgStarThree(R.drawable.star);
+        }
+
+        else if(item.getPuntuacio() == 3) {
+            item.setImgStarOne(R.drawable.star);
+            item.setImgStarTwo(R.drawable.star);
+            item.setImgStarThree(R.drawable.star);
+        }
+
+        bloquejarnivells(item, position);
+
+
             if (items.get(position).getlocked() == true) {
                 holder.itemView.setEnabled(false);
 
@@ -58,12 +76,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
         holder.tvNpreguntes.setText(item.getNpreguntes());
         holder.mundo.setText(item.getMundo());
         holder.tvTitol.setText(item.getTitol());
-
+        final int posicio = position;
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(holder.itemView.getContext(), JocAvtivity.class);
                 intent.putExtra("detallItem", item);
+                intent.putExtra("pos",posicio);
                 holder.itemView.getContext().startActivity(intent);}
         });
     }
@@ -71,6 +90,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
     @Override
     public int getItemCount() {
         return items.size();
+    }
+
+
+    private void bloquejarnivells(ItemList item, int position) {
+            if(items.get(position).getPuntuacio() > 0) {
+                if(items.get(position+1) != null) {
+                    items.get(position + 1).setLocked(false);
+                }
+            }
     }
 
     public static class RecyclerHolder extends RecyclerView.ViewHolder{

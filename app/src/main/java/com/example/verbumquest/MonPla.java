@@ -18,9 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MonPla extends AppCompatActivity {
-    private RecyclerView rvLlista;
+    public static RecyclerView rvLlista;
     private RecyclerAdapter adapter;
-    private List<ItemList> items;
+    public static List<ItemList> items;
     private RecyclerView block;
 
 
@@ -34,6 +34,13 @@ public class MonPla extends AppCompatActivity {
         initViews();
         initValues();
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        adapter.notifyDataSetChanged();
+    }
+
 
     //Declarar vistas
     private void initViews() {
@@ -54,10 +61,10 @@ public class MonPla extends AppCompatActivity {
     private List<ItemList> getItems() {
         List<ItemList> itemLists = new ArrayList<>();
 
-        itemLists.add(new ItemList("Esplanada","Lvl 1", "Preguntes totals: 10", 0 , false, R.drawable.slime,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Esplanada","Lvl 2", "Preguntes totals: 10", 0,true,  R.drawable.minitree,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Esplanada","Lvl 3", "Preguntes totals: 10", 0,true,  R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Esplanada","Lvl 4", "Preguntes totals: 10",0,true, R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 1", "Preguntes totals: 6", 0 , false, R.drawable.slime,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 2", "Preguntes totals: 6", 0,true,  R.drawable.minitree,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 3", "Preguntes totals: 6", 0,true,  R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 4", "Preguntes totals: 6",0,true, R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         return itemLists;
     }
 

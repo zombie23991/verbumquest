@@ -13,9 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Torre extends AppCompatActivity {
-    private RecyclerView rvLlista;
+    public static RecyclerView rvLlista;
     private RecyclerAdapter adapter;
-    private List<ItemList> items;
+    public static List<ItemList> items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,12 @@ public class Torre extends AppCompatActivity {
         //Crida de procesos
         initViews();
         initValues();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        adapter.notifyDataSetChanged();
     }
 
     //Declarar vistas
@@ -46,6 +52,9 @@ public class Torre extends AppCompatActivity {
         List<ItemList> itemLists = new ArrayList<>();
 
         itemLists.add(new ItemList("Torre","Lvl 1", "Preguntes totals: 10",0 ,false ,  R.drawable.minotaur,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Torre","Lvl 2", "Preguntes totals: 10",0 ,false ,  R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Torre","Lvl 3", "Preguntes totals: 10",0 ,false ,  R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+
         return itemLists;
     }
 

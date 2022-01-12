@@ -39,6 +39,8 @@ public class JocAvtivity extends AppCompatActivity {
     public jugador jugador = new jugador(3);
     public enemic enemic = new enemic(5);
 
+    int posicio;
+
     boolean GameOver = false;
     Dialog miDialog;
 
@@ -347,7 +349,7 @@ public class JocAvtivity extends AppCompatActivity {
     private void MensajeGameOver(){
         String ubicacio = "fonts/pixel.ttf";
         Typeface Tf = Typeface.createFromAsset(JocAvtivity.this.getAssets(), ubicacio);
-
+        int punt = 0;
         TextView Fi, punts;
         ImageView imgStarOne, imgStarTwo, imgStarThree;
         Button sortir, reintentar;
@@ -379,18 +381,37 @@ public class JocAvtivity extends AppCompatActivity {
         if(jugador.getVides() == 0){
             Fi.setText("Has perdut, torna ha intentar-ho!");}
         else if(jugador.getVides() == 1){
-            imgStarOne.setImageResource(R.drawable.star);}
+            imgStarOne.setImageResource(R.drawable.star);
+            punt = 1;}
         else if(jugador.getVides() == 2){
             imgStarOne.setImageResource(R.drawable.star);
-            imgStarTwo.setImageResource(R.drawable.star);}
+            imgStarTwo.setImageResource(R.drawable.star);
+            punt = 2;}
         else if(jugador.getVides() == 3){
             imgStarOne.setImageResource(R.drawable.star);
             imgStarTwo.setImageResource(R.drawable.star);
-            imgStarThree.setImageResource(R.drawable.star);}
+            imgStarThree.setImageResource(R.drawable.star);
+            punt = 3;}
+
+        int finalPunt = punt;
 
         sortir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                switch(detallItem.getMundo())
+                {
+                    case "Esplanada": MonPla.items.get(posicio).setPuntuacio(finalPunt);
+                    break;
+                    case "Desert": monDesert.items.get(posicio).setPuntuacio(finalPunt);
+                    break;
+                    case "Bosc": monSelva.items.get(posicio).setPuntuacio(finalPunt);
+                    break;
+                    case "Torre": Torre.items.get(posicio).setPuntuacio(finalPunt);
+                        break;
+
+                }
+
                 finish();
             }
         });
@@ -424,6 +445,7 @@ public class JocAvtivity extends AppCompatActivity {
 
     private void initValues(){
         detallItem = (ItemList) getIntent().getExtras().getSerializable("detallItem");
+        posicio = getIntent().getExtras().getInt("pos");
 
         //extreure la informacio del Recycler View a la pantalla
         imgResource.setImageResource(detallItem.getImgResource());

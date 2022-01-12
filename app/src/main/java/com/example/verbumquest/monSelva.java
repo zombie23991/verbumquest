@@ -17,9 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class monSelva extends AppCompatActivity {
-    private RecyclerView rvLlista;
+    public static RecyclerView rvLlista;
     private RecyclerAdapter adapter;
-    private List<ItemList> items;
+    public static List<ItemList> items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,12 @@ public class monSelva extends AppCompatActivity {
         //Crida de procesos
         initViews();
         initValues();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        adapter.notifyDataSetChanged();
     }
 
     //Declarar vistas
@@ -50,8 +56,12 @@ public class monSelva extends AppCompatActivity {
     private List<ItemList> getItems() {
         List<ItemList> itemLists = new ArrayList<>();
 
-        itemLists.add(new ItemList("Bosc","Lvl 1", "Preguntes totals: 10", 0 , false, R.drawable.skeleton, R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Bosc","Lvl 2", "Preguntes totals: 10", 0 , false, R.drawable.minitree, R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Bosc","Lvl 1", "Preguntes totals: 6", 0 , false, R.drawable.skeleton, R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Bosc","Lvl 2", "Preguntes totals: 6", 0 , true, R.drawable.minitree, R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Bosc","Lvl 3", "Preguntes totals: 6", 0 , true, R.drawable.skeleton, R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Bosc","Lvl 4", "Preguntes totals: 6", 0 , true, R.drawable.minitree, R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Bosc","Lvl 5", "Preguntes totals: 6", 0 , true, R.drawable.skeleton, R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Bosc","Lvl 6", "Preguntes totals: 6", 0 , true, R.drawable.minitree, R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         return itemLists;
     }
 }

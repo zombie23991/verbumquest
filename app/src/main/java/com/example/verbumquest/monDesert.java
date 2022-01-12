@@ -13,9 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class monDesert extends AppCompatActivity {
-    private RecyclerView rvLlista;
     private RecyclerAdapter adapter;
-    private List<ItemList> items;
+    public static RecyclerView rvLlista;
+    public static List<ItemList> items;
 
 
     @Override
@@ -26,6 +26,12 @@ public class monDesert extends AppCompatActivity {
         //Crida de procesos
         initViews();
         initValues();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        adapter.notifyDataSetChanged();
     }
 
     //Declarar vistas
@@ -46,8 +52,12 @@ public class monDesert extends AppCompatActivity {
     //Creacio de nivells
     private List<ItemList> getItems() {
         List<ItemList> itemLists = new ArrayList<>();
-        itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 10", 0 , false, R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 10", 0 , false, R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 6", 0 , false, R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Desert","Lvl: 2", "Preguntes totals: 6", 0 , true, R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Desert","Lvl: 3", "Preguntes totals: 6", 0 , true, R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Desert","Lvl: 4", "Preguntes totals: 6", 0 , true, R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Desert","Lvl: 5", "Preguntes totals: 6", 0 , true, R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Desert","Lvl: 6", "Preguntes totals: 6", 0 , true, R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         return itemLists;
     }
 
