@@ -46,6 +46,8 @@ public class Torre extends AppCompatActivity {
         List<ItemList> itemLists = new ArrayList<>();
 
         itemLists.add(new ItemList("Torre","Lvl 1", "Preguntes totals: 10",0 ,false ,  R.drawable.minotaur,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Torre","Lvl 2", "Preguntes totals: 10",0 ,false ,  R.drawable.big_bloated,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Torre","Lvl 3", "Preguntes totals: 10",0 ,false ,  R.drawable.battle_turtle,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         return itemLists;
     }
 

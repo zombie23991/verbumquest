@@ -25,7 +25,7 @@
         android:id="@+id/gifEnemic"
         android:layout_width="118dp"
         android:layout_height="189dp"
-        android:layout_gravity="bottom"
+        android:layout_gravity="bottom|center"
         android:layout_marginRight="10dp"
         android:adjustViewBounds="false"
         android:scaleType="centerInside"
