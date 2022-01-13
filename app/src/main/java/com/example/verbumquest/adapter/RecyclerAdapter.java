@@ -42,9 +42,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
     public void onBindViewHolder(@NonNull RecyclerHolder holder, int position) {
         ItemList item = items.get(position);
 
-            if (items.get(position).getlocked() == true) {
+            if (items.get(position).getlocked()) {
                 holder.itemView.setEnabled(false);
-
             }
             else {
                 holder.itemView.setEnabled(true);
@@ -64,7 +63,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
             public void onClick(View view) {
                 Intent intent = new Intent(holder.itemView.getContext(), JocAvtivity.class);
                 intent.putExtra("detallItem", item);
-                holder.itemView.getContext().startActivity(intent);}
+                holder.itemView.getContext().startActivity(intent);
+            }
         });
     }
 
