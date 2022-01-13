@@ -137,6 +137,7 @@ public class JocAvtivity extends AppCompatActivity {
                             gameover();
                         } else {
                             b1.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
+                            b1.setEnabled(false);
                             jugador.setVides(jugador.getVides() - 1);
                             restarvidasprota();
                         }
@@ -168,6 +169,7 @@ public class JocAvtivity extends AppCompatActivity {
                             gameover();
                         } else {
                             b2.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
+                            b2.setEnabled(false);
                             jugador.setVides(jugador.getVides() - 1);
                             restarvidasprota();
                         }
@@ -199,6 +201,7 @@ public class JocAvtivity extends AppCompatActivity {
                             gameover();
                         } else {
                             b3.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
+                            b3.setEnabled(false);
                             jugador.setVides(jugador.getVides() - 1);
                             restarvidasprota();
                         }
@@ -231,6 +234,7 @@ public class JocAvtivity extends AppCompatActivity {
                             gameover();
                         } else {
                             b4.setBackgroundResource(R.drawable.boto_personalitzat_preguntes_correcte);
+                            b4.setEnabled(false);
                             jugador.setVides(jugador.getVides() - 1);
                             restarvidasprota();
                         }
@@ -252,9 +256,13 @@ public class JocAvtivity extends AppCompatActivity {
 
     private void resetejarBotons() {
         b1.setBackgroundResource(R.drawable.boto_personalitzat_preguntes);
+        b1.setEnabled(true);
         b2.setBackgroundResource(R.drawable.boto_personalitzat_preguntes);
+        b2.setEnabled(true);
         b3.setBackgroundResource(R.drawable.boto_personalitzat_preguntes);
+        b3.setEnabled(true);
         b4.setBackgroundResource(R.drawable.boto_personalitzat_preguntes);
+        b4.setEnabled(true);
     }
 
     private void escenari(){
