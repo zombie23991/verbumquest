@@ -53,6 +53,10 @@ public class ItemList  implements Serializable {
         this.puntuacio = puntuacio;
     }
 
+    public int getPuntuacio() {
+        return puntuacio;
+    }
+
     public void setLocked(boolean locked) {
         this.locked = locked;
     }
@@ -65,9 +69,7 @@ public class ItemList  implements Serializable {
         return imgStarOne;
     }
 
-    public int getPuntuacio() {
-        return puntuacio;
-    }
+
 
     public int getImgStarTwo() {
         return imgStarTwo;

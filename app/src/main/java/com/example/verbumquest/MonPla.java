@@ -21,7 +21,6 @@ public class MonPla extends AppCompatActivity {
     public static RecyclerView rvLlista;
     private RecyclerAdapter adapter;
     public static List<ItemList> items;
-    private RecyclerView block;
 
 
 

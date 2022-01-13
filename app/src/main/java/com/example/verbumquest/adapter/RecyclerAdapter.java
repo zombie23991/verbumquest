@@ -95,9 +95,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
 
     private void bloquejarnivells(ItemList item, int position) {
             if(items.get(position).getPuntuacio() > 0) {
-                if(items.get(position+1) != null) {
+
                     items.get(position + 1).setLocked(false);
-                }
+
             }
     }
 
