@@ -47,7 +47,7 @@ public class monDesert extends AppCompatActivity {
     private List<ItemList> getItems() {
         List<ItemList> itemLists = new ArrayList<>();
         itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 10", 0 , false, R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 10", 0 , false, R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 10", 0 , true, R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         return itemLists;
     }
 
