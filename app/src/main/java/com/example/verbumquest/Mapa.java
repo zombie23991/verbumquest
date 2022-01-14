@@ -1,6 +1,7 @@
 package com.example.verbumquest;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.RecoverySystem;
 import android.view.View;
@@ -26,6 +27,15 @@ public class Mapa extends AppCompatActivity {
         mon1 = findViewById(R.id.mon1);
         mon2 = findViewById(R.id.mon2);
         mon3 = findViewById(R.id.mon3);
+
+        //Ubicacio
+        String ubicacio = "fonts/pixel.ttf";
+        Typeface Tf = Typeface.createFromAsset(Mapa.this.getAssets(), ubicacio);
+
+        //passar text a tipus de font lletra
+        mon1.setTypeface(Tf);
+        mon2.setTypeface(Tf);
+        mon3.setTypeface(Tf);
 
         mon1.setOnClickListener(new View.OnClickListener() {
             @Override

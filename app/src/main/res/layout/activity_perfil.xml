@@ -29,12 +29,12 @@
             android:id="@+id/titol"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:background="@drawable/caixa_titol"
             android:layout_marginTop="10dp"
+            android:background="@drawable/caixa_titol"
+            android:gravity="center"
             android:text="@string/titol"
             android:textColor="#FFFFFF"
-            android:textSize="50dp"
+            android:textSize="65sp"
             android:textStyle="bold" />
 
 
@@ -42,12 +42,12 @@
             android:id="@+id/nom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/caixa_border_radius"
             android:layout_marginTop="10dp"
+            android:background="@drawable/caixa_border_radius"
             android:paddingLeft="10dp"
             android:text="@string/nom"
             android:textColor="#FFFFFF"
-            android:textSize="30dp" />
+            android:textSize="36sp" />
 
         <TextView
             android:id="@+id/correu"
@@ -64,13 +64,13 @@
             android:id="@+id/puntuaciototal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/caixa_border_radius"
             android:layout_marginTop="10dp"
-            android:paddingLeft="10dp"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/caixa_border_radius"
+            android:paddingLeft="10dp"
             android:text="@string/puntuaciototal"
             android:textColor="#FFFFFF"
-            android:textSize="30dp" />
+            android:textSize="48sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

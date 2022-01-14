@@ -33,7 +33,7 @@ public class perfil extends AppCompatActivity {
     FirebaseFirestore fstore; //VARIABLE BASE DE DADES DES DE FIREBASE
     FirebaseAuth auth; //AUTENTICACIÓ FIREBASE
 
-    TextView tvNom, tvCorreu, tvPuntuacio;
+    TextView tvNom, tvCorreu, tvPuntuacio, titol;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,17 @@ public class perfil extends AppCompatActivity {
         tvNom = findViewById(R.id.nom);
         tvCorreu = findViewById(R.id.correu);
         tvPuntuacio = findViewById(R.id.puntuaciototal);
+        titol = findViewById(R.id.titol);
+
+        //Ubicacio
+        String ubicacio = "fonts/pixel.ttf";
+        Typeface Tf = Typeface.createFromAsset(perfil.this.getAssets(), ubicacio);
+
+        //passar text a tipus de font lletra
+        tvNom.setTypeface(Tf);
+        tvCorreu.setTypeface(Tf);
+        tvPuntuacio.setTypeface(Tf);
+        titol.setTypeface(Tf);
 
         FirebaseUser user = auth.getCurrentUser();
         assert user != null; // CONFIRMACIO DE QUE L'USUARI NO ES NULL
