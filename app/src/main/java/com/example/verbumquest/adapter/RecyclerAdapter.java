@@ -42,6 +42,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
     public void onBindViewHolder(@NonNull RecyclerHolder holder, int position) {
         ItemList item = items.get(position);
 
+
         if(item.getPuntuacio() == 1) {
             item.setImgStarTwo(R.drawable.star);
         }
@@ -82,8 +83,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
             public void onClick(View view) {
                 Intent intent = new Intent(holder.itemView.getContext(), JocAvtivity.class);
                 intent.putExtra("detallItem", item);
+                holder.itemView.getContext().startActivity(intent);
                 intent.putExtra("pos",posicio);
-                holder.itemView.getContext().startActivity(intent);}
+                holder.itemView.getContext().startActivity(intent);
+            }
+
         });
     }
 

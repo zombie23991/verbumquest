@@ -60,10 +60,17 @@ public class MonPla extends AppCompatActivity {
     private List<ItemList> getItems() {
         List<ItemList> itemLists = new ArrayList<>();
 
-        itemLists.add(new ItemList("Esplanada","Lvl 1", "Preguntes totals: 6", 0 , false, R.drawable.slime,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Esplanada","Lvl 2", "Preguntes totals: 6", 0,true,  R.drawable.minitree,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Esplanada","Lvl 3", "Preguntes totals: 6", 0,true,  R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Esplanada","Lvl 4", "Preguntes totals: 6",0,true, R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 1", "Preguntes totals: 5", 0, false, R.drawable.slime,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 2", "Preguntes totals: 5", 0,true,  R.drawable.hyena,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 3", "Preguntes totals: 5", 0,true,  R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 4", "Preguntes totals: 5",0,true, R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+
+        itemLists.add(new ItemList("Esplanada","Lvl 5", "Preguntes totals: 5", 0, true, R.drawable.snake,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 6", "Preguntes totals: 5", 0,true,  R.drawable.scorpio,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 7", "Preguntes totals: 5", 0,true,  R.drawable.centipede,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 8", "Preguntes totals: 5",0,true, R.drawable.big_bloated,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 9", "Preguntes totals: 5", 0,true,  R.drawable.battle_turtle,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Esplanada","Lvl 10", "Preguntes totals: 5",0,true, R.drawable.mummy,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         return itemLists;
     }
 
