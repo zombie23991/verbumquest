@@ -17,9 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class monSelva extends AppCompatActivity {
-    private RecyclerView rvLlista;
+    public static RecyclerView rvLlista;
     private RecyclerAdapter adapter;
-    private List<ItemList> items;
+    public static List<ItemList> items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
