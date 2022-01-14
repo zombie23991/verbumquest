@@ -71,6 +71,6 @@ public class monDesert extends AppCompatActivity {
         itemLists.add(new ItemList("Desert","Lvl 10", "Preguntes totals: 5",0,true, R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         return itemLists;
     }
-
+//jkasdfbfasfjasfasfjnoñasqñfksokñfl
 }
 
