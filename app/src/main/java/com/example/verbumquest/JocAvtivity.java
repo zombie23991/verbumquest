@@ -85,6 +85,7 @@ public class JocAvtivity extends AppCompatActivity {
         pregunta = findViewById(R.id.pregunta);
         mundo = findViewById(R.id.mundo);
 
+        //iniciañitzem nivell
         protagonista();
         vides();
         initViews();
