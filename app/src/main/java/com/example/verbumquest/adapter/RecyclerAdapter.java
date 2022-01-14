@@ -83,7 +83,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
             public void onClick(View view) {
                 Intent intent = new Intent(holder.itemView.getContext(), JocAvtivity.class);
                 intent.putExtra("detallItem", item);
-                holder.itemView.getContext().startActivity(intent);
                 intent.putExtra("pos",posicio);
                 holder.itemView.getContext().startActivity(intent);
             }
