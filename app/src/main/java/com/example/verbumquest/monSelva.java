@@ -57,8 +57,8 @@ public class monSelva extends AppCompatActivity {
         List<ItemList> itemLists = new ArrayList<>();
 
         itemLists.add(new ItemList("Bosc","Lvl 1", "Preguntes totals: 10", 0 , false, R.drawable.skeleton, R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Bosc","Lvl 2", "Preguntes totals: 10", 0 , false, R.drawable.minitree, R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Bosc","Lvl: 3", "Preguntes totals: 5", 0 , false, R.drawable.scorpio,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Bosc","Lvl 2", "Preguntes totals: 10", 0 , true, R.drawable.minitree, R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Bosc","Lvl: 3", "Preguntes totals: 5", 0 , true, R.drawable.scorpio,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         itemLists.add(new ItemList("Bosc","Lvl: 4", "Preguntes totals: 5", 0 , true, R.drawable.battle_turtle,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
 
         itemLists.add(new ItemList("Bosc","Lvl 5", "Preguntes totals: 5", 0, true, R.drawable.snake,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
