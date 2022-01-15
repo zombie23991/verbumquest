@@ -1,16 +1,21 @@
 package com.example.verbumquest;
 
+import static android.content.ContentValues.TAG;
+
 import android.app.Dialog;
 import android.content.ClipData;
 import android.graphics.Typeface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,12 +23,23 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.verbumquest.adapter.RecyclerAdapter;
 import com.example.verbumquest.model.ItemList;
 import com.example.verbumquest.model.preguntes;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Random;
 
 import pl.droidsonroids.gif.GifImageView;
@@ -40,7 +56,11 @@ public class JocAvtivity extends AppCompatActivity {
     private GifImageView gifprota;
     public jugador jugador = new jugador(3);
     public enemic enemic = new enemic(5);
-    private boolean endavant = false;
+    int puntuacioNivell = 0, finalPunt = 0;
+
+    private FirebaseFirestore fstore = FirebaseFirestore.getInstance();
+    private FirebaseAuth auth = FirebaseAuth.getInstance();
+    FirebaseUser usuari = auth.getCurrentUser();
 
     private generarPreguntes generador = Menu.generador;
 
@@ -87,7 +107,7 @@ public class JocAvtivity extends AppCompatActivity {
         pregunta = findViewById(R.id.pregunta);
         mundo = findViewById(R.id.mundo);
 
-        //iniciañitzem nivell
+        //inicialitzem nivell
         protagonista();
         vides();
         initViews();
@@ -384,18 +404,21 @@ public class JocAvtivity extends AppCompatActivity {
         }
         else if(jugador.getVides() == 1){
             imgStarOne.setImageResource(R.drawable.star);
-            punt = 1;}
+            punt = 1;
+        }
         else if(jugador.getVides() == 2){
             imgStarOne.setImageResource(R.drawable.star);
             imgStarTwo.setImageResource(R.drawable.star);
-            punt = 2;}
+            punt = 2;
+        }
         else if(jugador.getVides() == 3){
             imgStarOne.setImageResource(R.drawable.star);
             imgStarTwo.setImageResource(R.drawable.star);
             imgStarThree.setImageResource(R.drawable.star);
-            punt = 3;}
+            punt = 3;
+        }
 
-        int finalPunt = punt;
+        finalPunt = punt;
 
         sortir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -403,13 +426,28 @@ public class JocAvtivity extends AppCompatActivity {
 
                 switch(detallItem.getMundo())
                 {
-                    case "Esplanada": MonPla.items.get(posicio).setPuntuacio(finalPunt);
+                    case "Esplanada":
+                        RegistrarPuntuacio("Esplanada", posicio, finalPunt);
+                        finalPunt = AgafarPuntuacio("Esplanada", posicio);
+                        MonPla.items.get(posicio).setPuntuacio(finalPunt);
+                        break;
+                    case "Desert":
+                        RegistrarPuntuacio("Desert", posicio, finalPunt);
+                        finalPunt = AgafarPuntuacio("Desert", posicio);
+                        monDesert.items.get(posicio).setPuntuacio(finalPunt);
+
+                        break;
+                    case "Bosc":
+                        RegistrarPuntuacio("Bosc", posicio, finalPunt);
+                        finalPunt = AgafarPuntuacio("Bosc", posicio);
+                        monSelva.items.get(posicio).setPuntuacio(finalPunt);
+
                     break;
-                    case "Desert": monDesert.items.get(posicio).setPuntuacio(finalPunt);
-                    break;
-                    case "Bosc": monSelva.items.get(posicio).setPuntuacio(finalPunt);
-                    break;
-                    case "Torre": Torre.items.get(posicio).setPuntuacio(finalPunt);
+                    case "Torre":
+                        RegistrarPuntuacio("Torre", posicio, finalPunt);
+                        finalPunt = AgafarPuntuacio("Torre", posicio);
+                        Torre.items.get(posicio).setPuntuacio(finalPunt);
+
                         break;
 
                 }
@@ -437,6 +475,52 @@ public class JocAvtivity extends AppCompatActivity {
         });
 
         miDialog.show();
+    }
+
+    private void RegistrarPuntuacio(String nomMapa, int posicio, int finalPunt) {
+        Map<String,Object> puntuacioNivell = new HashMap<>();
+        posicio += 1;
+        puntuacioNivell.put("Nivell " + posicio, finalPunt);
+
+        fstore.collection("Usuaris").document(usuari.getUid()).
+                collection("Puntuacio Nivells").
+                document(nomMapa).set(puntuacioNivell).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(@NonNull Void unused) {
+                        Log.d(TAG, "onSuccess: La puntuació s'ha guardat");
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d(TAG, "onFailure: " + e.toString());
+                    }
+                });
+    }
+
+    private int AgafarPuntuacio(String nomMapa, int posicio){
+        posicio += 1;
+        String nivell = ("Nivell " + posicio);
+
+        fstore.collection("Usuaris").document(usuari.getUid()).
+                collection(nomMapa).get().
+                addOnCompleteListener(new OnCompleteListener() {
+                    @Override
+                    public void onComplete(@NonNull Task task) {
+                        if(task.isSuccessful()){
+                            DocumentSnapshot puntuacioUsuari = (DocumentSnapshot) task.getResult();
+                            if (puntuacioUsuari.exists()) {
+                                Log.d(TAG, "DocumentSnapshot data: " + puntuacioUsuari.getData());
+                                puntuacioNivell = Integer.parseInt(puntuacioUsuari.getData().get(nivell).toString());
+
+                            } else {
+                                Log.d(TAG, "No existeix l'usuari");
+                            }
+                        } else {
+                            Log.d(TAG, "get failed with ", task.getException());
+                        }
+                    }
+                });
+        return puntuacioNivell;
     }
 
     private void initViews(){
