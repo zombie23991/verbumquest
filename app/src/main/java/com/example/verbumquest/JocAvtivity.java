@@ -114,6 +114,7 @@ public class JocAvtivity extends AppCompatActivity {
 
         questionList = generador.getPreguntes();
         currentPos = random.nextInt(questionList.size());
+
         setDataToViews(currentPos);
         //do {
         b1.setOnClickListener(new View.OnClickListener() {

@@ -65,7 +65,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
 
             if (items.get(position).getlocked() == true) {
                 holder.itemView.setEnabled(false);
-                holder.imgResource2.setBackgroundResource(R.drawable.candau);
+                holder.imgResource2.setImageResource(R.drawable.candau);
                 holder.imgResource.setImageResource(0);
                 holder.imgStarOne.setImageResource(0);
                 holder.imgStarTwo.setImageResource(0);
@@ -76,7 +76,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
             }
             else {
                 holder.itemView.setEnabled(true);
-                //holder.imgResource2.setImageResource(R.drawable.espasa);
+                holder.imgResource2.setImageResource(R.drawable.espasa);
                 holder.imgResource.setImageResource(item.getImgResource());
                 holder.imgStarOne.setImageResource(item.getImgStarOne());
                 holder.imgStarTwo.setImageResource(item.getImgStarTwo());
@@ -107,14 +107,17 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
 
 
     private void bloquejarnivells(ItemList item, int position) {
-            if(items.get(position).getPuntuacio() > 0) {
-                    if(position < items.size()){
-                        items.get(position + 1).setLocked(false);}
-                    else if(position == items.size()){
-                        items.get(position).setLocked(false);}
 
-            }
+        if(position == 0) {
+            items.get(0).setLocked(false);
+        } else if(position == items.size() && items.get(position - 1).getPuntuacio() > 0) {
+                 items.get(position).setLocked(false);
+        }
+        else if(items.get(position - 1).getPuntuacio() > 0 ) {
+            items.get(position).setLocked(false);
+        }
     }
+
 
     public static class RecyclerHolder extends RecyclerView.ViewHolder{
 

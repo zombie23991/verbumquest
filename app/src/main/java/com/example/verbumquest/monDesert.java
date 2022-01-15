@@ -43,7 +43,6 @@ public class monDesert extends AppCompatActivity {
     private void initValues() {
         LinearLayoutManager manager = new LinearLayoutManager(this);
         rvLlista.setLayoutManager(manager);
-
         items = getItems();
         adapter = new RecyclerAdapter(items);
         rvLlista.setAdapter(adapter);
@@ -56,7 +55,6 @@ public class monDesert extends AppCompatActivity {
         itemLists.add(new ItemList("Desert","Lvl: 2", "Preguntes totals: 5", 0 , true, R.drawable.mummy,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         itemLists.add(new ItemList("Desert","Lvl: 3", "Preguntes totals: 5", 0 , true, R.drawable.scorpio,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         itemLists.add(new ItemList("Desert","Lvl: 4", "Preguntes totals: 5", 0 , true, R.drawable.snake,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-
         itemLists.add(new ItemList("Desert","Lvl 5", "Preguntes totals: 5", 0, true, R.drawable.deceased,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         itemLists.add(new ItemList("Desert","Lvl 6", "Preguntes totals: 5", 0,true,  R.drawable.mummy,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         itemLists.add(new ItemList("Desert","Lvl 7", "Preguntes totals: 5", 0,true,  R.drawable.centipede,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
