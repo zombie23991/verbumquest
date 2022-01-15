@@ -52,7 +52,7 @@ public class monDesert extends AppCompatActivity {
     //Creacio de nivells
     private List<ItemList> getItems() {
         List<ItemList> itemLists = new ArrayList<>();
-        itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 5", 0 , true, R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
+        itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 5",0 , false, R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         itemLists.add(new ItemList("Desert","Lvl: 2", "Preguntes totals: 5", 0 , true, R.drawable.mummy,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         itemLists.add(new ItemList("Desert","Lvl: 3", "Preguntes totals: 5", 0 , true, R.drawable.scorpio,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         itemLists.add(new ItemList("Desert","Lvl: 4", "Preguntes totals: 5", 0 , true, R.drawable.snake,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
@@ -65,6 +65,5 @@ public class monDesert extends AppCompatActivity {
         itemLists.add(new ItemList("Desert","Lvl 10", "Preguntes totals: 5",0,true, R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
         return itemLists;
     }
-//jkasdfbfasfjasfasfjnoñasqñfksokñfl
 }
 
