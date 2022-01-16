@@ -89,11 +89,10 @@ public class JocAvtivity extends AppCompatActivity {
 
         //iniciañitzem nivell
         protagonista();
-        vides();
         initViews();
         initValues();
         escenari();
-
+        vides();
         tvQuestions = findViewById(R.id.pregunta);
 
         //botons de nivell
@@ -354,11 +353,11 @@ public class JocAvtivity extends AppCompatActivity {
 
         //enemic
         if(mundo.getText().equals("Torre")) {
-            imgEvilLive1.setImageResource(R.drawable.hearton);
-            imgEvilLive2.setImageResource(R.drawable.hearton);
-            imgEvilLive3.setImageResource(R.drawable.hearton);
-            imgEvilLive4.setImageResource(R.drawable.hearton);
-            imgEvilLive5.setImageResource(R.drawable.hearton);
+            imgEvilLive1.setImageResource(R.drawable.heartevil2);
+            imgEvilLive2.setImageResource(R.drawable.heartevil2);
+            imgEvilLive3.setImageResource(R.drawable.heartevil2);
+            imgEvilLive4.setImageResource(R.drawable.heartevil2);
+            imgEvilLive5.setImageResource(R.drawable.heartevil2);
         }
         else{
             imgEvilLive1.setImageResource(R.drawable.heartevil);
