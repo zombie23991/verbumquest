@@ -269,7 +269,7 @@ public class JocAvtivity extends AppCompatActivity {
     }
 
     private void escenari(){
-//comentari
+        pregunta.getBackground().setAlpha(100);
         if(mundo.getText().equals("Esplanada")){
             fons.setBackgroundResource(R.drawable.esplanada);
         }else if(mundo.getText().equals("Bosc")){
