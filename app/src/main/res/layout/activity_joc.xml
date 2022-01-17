@@ -41,6 +41,7 @@
         android:layout_width="368dp"
         android:layout_height="80dp"
         android:autoText="false"
+        android:background="@drawable/caixa_titol"
         android:fontFamily="serif"
         android:gravity="bottom|center"
         android:text="TextView"
