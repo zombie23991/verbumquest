@@ -2,6 +2,8 @@ package com.example.verbumquest.adapter;
 
 import android.content.ClipData;
 import android.content.Intent;
+import android.graphics.Color;
+import android.media.Image;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,23 +62,38 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
 
         bloquejarnivells(item, position);
 
-
+            // en cas de que el nivell no es pugui jugar
             if (items.get(position).getlocked() == true) {
                 holder.itemView.setEnabled(false);
-
+                holder.imgResource2.setImageResource(R.drawable.candau);
+                holder.imgResource.setImageResource(0);
+                holder.imgStarOne.setImageResource(0);
+                holder.imgStarTwo.setImageResource(0);
+                holder.imgStarThree.setImageResource(0);
+                holder.tvNpreguntes.setText(null);
+                holder.mundo.setText(null);
+                holder.tvTitol.setText(null);
             }
+            //en cas de que el nivell si que es pugui jugar
             else {
                 holder.itemView.setEnabled(true);
+                holder.imgResource2.setImageResource(R.drawable.espasa);
+                holder.imgResource.setImageResource(item.getImgResource());
+                holder.imgStarOne.setImageResource(item.getImgStarOne());
+                holder.imgStarTwo.setImageResource(item.getImgStarTwo());
+                holder.imgStarThree.setImageResource(item.getImgStarThree());
+                holder.tvNpreguntes.setText(item.getNpreguntes());
+                holder.mundo.setText(item.getMundo());
+                holder.tvTitol.setText(item.getTitol());
+
+                //si es torre fa el fons diferent
+                if (holder.mundo.getText() == "Torre"){
+                    holder.imgResource2.setImageResource(R.drawable.torreespasa);
+
+                }
             }
 
 
-        holder.imgResource.setImageResource(item.getImgResource());
-        holder.imgStarOne.setImageResource(item.getImgStarOne());
-        holder.imgStarTwo.setImageResource(item.getImgStarTwo());
-        holder.imgStarThree.setImageResource(item.getImgStarThree());
-        holder.tvNpreguntes.setText(item.getNpreguntes());
-        holder.mundo.setText(item.getMundo());
-        holder.tvTitol.setText(item.getTitol());
         final int posicio = position;
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,14 +114,23 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
 
 
     private void bloquejarnivells(ItemList item, int position) {
-            if(items.get(position).getPuntuacio() > 0) {
 
-                    items.get(position + 1).setLocked(false);
-
-            }
+        if(position == 0) {
+            items.get(0).setLocked(false);
+        } else if(position == items.size() && items.get(position - 1).getPuntuacio() > 0) {
+                 items.get(position).setLocked(false);
+        }
+        else if(items.get(position - 1).getPuntuacio() > 0 ) {
+            items.get(position).setLocked(false);
+        }
     }
 
+
     public static class RecyclerHolder extends RecyclerView.ViewHolder{
+
+        //Element visual si el nivell esta bloquejat
+        public ImageView imgResource2;
+
         //imatge portada
         private GifImageView imgResource;
 
@@ -122,6 +148,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
 
         public RecyclerHolder(@NonNull View itemView) {
             super(itemView);
+            imgResource2 = itemView.findViewById(R.id.imgResource2);
             imgResource = itemView.findViewById(R.id.imgResource);
             imgStarOne = itemView.findViewById(R.id.imgStarOne);
             imgStarTwo = itemView.findViewById(R.id.imgStarTwo);

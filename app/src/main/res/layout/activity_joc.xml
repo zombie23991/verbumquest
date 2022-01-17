@@ -38,18 +38,21 @@
 
     <TextView
         android:id="@+id/pregunta"
-        android:layout_width="368dp"
-        android:layout_height="80dp"
+        android:layout_width="390dp"
+        android:layout_height="90dp"
+        android:autoSizeTextType="uniform"
         android:autoText="false"
+        android:background="@drawable/caixa_titol"
         android:fontFamily="serif"
-        android:gravity="bottom|center"
+        android:gravity="center"
         android:text="TextView"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -62,6 +65,7 @@
         app:layout_constraintGuide_percent="0.17" />
 
     <Button
+        android:autoSizeTextType="uniform"
         android:id="@+id/resposta1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -75,6 +79,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
     <Button
+        android:autoSizeTextType="uniform"
         android:id="@+id/resposta2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -89,6 +94,7 @@
         app:layout_constraintVertical_bias="0.64" />
 
     <Button
+        android:autoSizeTextType="uniform"
         android:id="@+id/resposta3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -103,6 +109,7 @@
         app:layout_constraintVertical_bias="0.538" />
 
     <Button
+        android:autoSizeTextType="uniform"
         android:id="@+id/resposta4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -153,10 +160,10 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintHorizontal_bias="0.01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007" />
+        app:layout_constraintVertical_bias="0.01" />
 
     <ImageView
         android:id="@+id/imgLiveOne"

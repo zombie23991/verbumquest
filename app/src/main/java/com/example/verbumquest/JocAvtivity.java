@@ -109,11 +109,10 @@ public class JocAvtivity extends AppCompatActivity {
 
         //inicialitzem nivell
         protagonista();
-        vides();
         initViews();
         initValues();
         escenari();
-
+        vides();
         tvQuestions = findViewById(R.id.pregunta);
 
         //botons de nivell
@@ -134,6 +133,7 @@ public class JocAvtivity extends AppCompatActivity {
 
         questionList = generador.getPreguntes();
         currentPos = random.nextInt(questionList.size());
+
         setDataToViews(currentPos);
         //do {
         b1.setOnClickListener(new View.OnClickListener() {
@@ -289,7 +289,7 @@ public class JocAvtivity extends AppCompatActivity {
     }
 
     private void escenari(){
-//comentari
+        pregunta.getBackground().setAlpha(100);
         if(mundo.getText().equals("Esplanada")){
             fons.setBackgroundResource(R.drawable.esplanada);
         }else if(mundo.getText().equals("Bosc")){
@@ -298,6 +298,7 @@ public class JocAvtivity extends AppCompatActivity {
             fons.setBackgroundResource(R.drawable.desert);
         }else if(mundo.getText().equals("Torre")){
             fons.setBackgroundResource(R.drawable.torre);
+            enemic.vides = 10;
         }
     }
 
@@ -331,6 +332,7 @@ public class JocAvtivity extends AppCompatActivity {
 
     private void restarvidesenemic(){
 
+        //ultima fila de lineas
         if(enemic.getVides() == 4) {
             imgEvilLive5.setImageResource(R.drawable.heartoff);
         }else if(enemic.getVides() == 3){
@@ -341,11 +343,27 @@ public class JocAvtivity extends AppCompatActivity {
             imgEvilLive2.setImageResource(R.drawable.heartoff);
         }else if(enemic.getVides() == 0) {
             imgEvilLive1.setImageResource(R.drawable.heartoff);
+
+        //segona linea de vides
+        }else if(enemic.getVides() == 9) {
+            imgEvilLive5.setImageResource(R.drawable.heartevil);
+        }else if(enemic.getVides() == 8){
+            imgEvilLive4.setImageResource(R.drawable.heartevil);
+        }else if(enemic.getVides() == 7) {
+            imgEvilLive3.setImageResource(R.drawable.heartevil);
+        }else if(enemic.getVides() == 6) {
+            imgEvilLive2.setImageResource(R.drawable.heartevil);
+        }else if(enemic.getVides() == 5) {
+            imgEvilLive1.setImageResource(R.drawable.heartevil);
         }
 
     }
 
     private void vides(){
+
+    if(mundo.getText().equals("Torre")){
+        enemic.vides = 10;
+    }
         //Insertar vides al inici del joc
         //protagonista
         imgLiveOne.setImageResource(R.drawable.hearton);
@@ -354,11 +372,20 @@ public class JocAvtivity extends AppCompatActivity {
 
 
         //enemic
-        imgEvilLive1.setImageResource(R.drawable.heartevil);
-        imgEvilLive2.setImageResource(R.drawable.heartevil);
-        imgEvilLive3.setImageResource(R.drawable.heartevil);
-        imgEvilLive4.setImageResource(R.drawable.heartevil);
-        imgEvilLive5.setImageResource(R.drawable.heartevil);
+        if(mundo.getText().equals("Torre")) {
+            imgEvilLive1.setImageResource(R.drawable.heartevil2);
+            imgEvilLive2.setImageResource(R.drawable.heartevil2);
+            imgEvilLive3.setImageResource(R.drawable.heartevil2);
+            imgEvilLive4.setImageResource(R.drawable.heartevil2);
+            imgEvilLive5.setImageResource(R.drawable.heartevil2);
+        }
+        else{
+            imgEvilLive1.setImageResource(R.drawable.heartevil);
+            imgEvilLive2.setImageResource(R.drawable.heartevil);
+            imgEvilLive3.setImageResource(R.drawable.heartevil);
+            imgEvilLive4.setImageResource(R.drawable.heartevil);
+            imgEvilLive5.setImageResource(R.drawable.heartevil);}
+
 
     }
 
@@ -465,7 +492,10 @@ public class JocAvtivity extends AppCompatActivity {
                 jugador.setVides(0);
                 jugador.setVides(jugador.getVides() + 3);
                 enemic.setVides(0);
-                enemic.setVides(enemic.getVides() + 5);
+                if(mundo.getText().equals("Torre")){
+                    enemic.setVides(enemic.getVides() + 10);
+                }else{
+                enemic.setVides(enemic.getVides() + 5);}
                 contador = 5;
                 vides();
                 resetejarBotons();
