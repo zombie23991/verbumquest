@@ -62,7 +62,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
 
         bloquejarnivells(item, position);
 
-
+            // en cas de que el nivell no es pugui jugar
             if (items.get(position).getlocked() == true) {
                 holder.itemView.setEnabled(false);
                 holder.imgResource2.setImageResource(R.drawable.candau);
@@ -74,6 +74,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
                 holder.mundo.setText(null);
                 holder.tvTitol.setText(null);
             }
+            //en cas de que el nivell si que es pugui jugar
             else {
                 holder.itemView.setEnabled(true);
                 holder.imgResource2.setImageResource(R.drawable.espasa);
@@ -84,6 +85,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
                 holder.tvNpreguntes.setText(item.getNpreguntes());
                 holder.mundo.setText(item.getMundo());
                 holder.tvTitol.setText(item.getTitol());
+
+                //si es torre fa el fons diferent
+                if (holder.mundo.getText() == "Torre"){
+                    holder.imgResource2.setImageResource(R.drawable.torreespasa);
+
+                }
             }
 
 
