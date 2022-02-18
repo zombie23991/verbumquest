@@ -52,11 +52,11 @@
             android:exported="true"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".VerbumQuest"
+            android:name=".Credits"
             android:exported="true"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Credits"
+            android:name=".VerbumQuest"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
