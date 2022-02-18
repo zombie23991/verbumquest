@@ -68,8 +68,8 @@ public class Menu extends AppCompatActivity {
         quisom.setOnClickListener(new  View.OnClickListener(){
             @Override
             public void onClick(View view){
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dragonfactory.cat/about-us/"));
-                        startActivity(browserIntent);
+                Intent intent = new Intent(Menu.this, Credits.class);
+                startActivity(intent);
             }
         });
 

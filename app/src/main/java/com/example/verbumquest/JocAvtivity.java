@@ -44,7 +44,7 @@ import java.util.Random;
 
 import pl.droidsonroids.gif.GifImageView;
 
-public class JocAvtivity extends AppCompatActivity {
+public class JocAvtivity<asyncTask> extends AppCompatActivity {
     private ImageView imgLiveOne, imgLiveTwo, imgLiveThree, imgEvilLive1, imgEvilLive2, imgEvilLive3, imgEvilLive4, imgEvilLive5;
     private GifImageView imgResource;
     private ConstraintLayout fons;
@@ -455,18 +455,18 @@ public class JocAvtivity extends AppCompatActivity {
                 {
                     case "Esplanada":
                         RegistrarPuntuacio("Esplanada", posicio, finalPunt);
-                        finalPunt = AgafarPuntuacio("Esplanada", posicio);
+                        //finalPunt = AgafarPuntuacio("Esplanada", posicio);
                         MonPla.items.get(posicio).setPuntuacio(finalPunt);
                         break;
                     case "Desert":
                         RegistrarPuntuacio("Desert", posicio, finalPunt);
-                        finalPunt = AgafarPuntuacio("Desert", posicio);
+                        //finalPunt = AgafarPuntuacio("Desert", posicio);
                         monDesert.items.get(posicio).setPuntuacio(finalPunt);
 
                         break;
                     case "Bosc":
                         RegistrarPuntuacio("Bosc", posicio, finalPunt);
-                        finalPunt = AgafarPuntuacio("Bosc", posicio);
+                        //finalPunt =  AgafarPuntuacio("Bosc", posicio);
                         monSelva.items.get(posicio).setPuntuacio(finalPunt);
 
                     break;
@@ -527,7 +527,7 @@ public class JocAvtivity extends AppCompatActivity {
                 });
     }
 
-    private int AgafarPuntuacio(String nomMapa, int posicio){
+    private  int AgafarPuntuacio(String nomMapa, int posicio){
         posicio += 1;
         String nivell = ("Nivell " + posicio);
 
