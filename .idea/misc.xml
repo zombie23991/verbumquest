@@ -12,18 +12,28 @@
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/drawable/caixa_titol.xml" value="0.15208333333333332" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/drawable/ic_launcher_background.xml" value="0.12916666666666668" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout-large/activity_joc.xml" value="0.2" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout-large/activity_login.xml" value="0.24111675126903553" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout-large/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout-large/activity_mapa.xml" value="0.144" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout-large/activity_menu.xml" value="0.2" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout-large/activity_perfil.xml" value="0.25" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout-large/activity_registre.xml" value="0.136" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout-large/gameover.xml" value="0.176" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout-large/item_nivell.xml" value="0.2" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout-xlarge/activity_menu.xml" value="0.16" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_credits.xml" value="0.1218469431380932" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_joc.xml" value="0.264" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_mapa.xml" value="0.1" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_menu.xml" value="0.2" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_mon_desert.xml" value="0.1218469431380932" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_monpla.xml" value="0.25" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_perfil.xml" value="0.264" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_quisom.xml" value="0.4" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_registre.xml" value="0.176" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_torre.xml" value="0.4" />
-        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_verbum_quest.xml" value="0.12239583333333333" />
+        <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/activity_verbum_quest.xml" value="0.144" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/gameover.xml" value="0.1" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/item_nivell.xml" value="0.536" />
         <entry key="..\:/Users/adria/AndroidStudioProjects/verbumquest/app/src/main/res/layout/item_nojugable.xml" value="0.4" />
