@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backpaper"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="907dp"
+        android:layout_height="1222dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="70dp">
+
+        <!--Login-->
+        <!--Registre-->
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="517dp"
+            android:layout_height="315dp"
+            android:layout_marginStart="501dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="483dp"
+            app:srcCompat="@drawable/text" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="819dp"
+            android:layout_height="193dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="175dp"
+            android:fontFamily="monospace"
+            android:text="Registre't per a poder guardar la teva puntuació i competir contra els teus amics!"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/BTLogin"
+            android:layout_width="230dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:backgroundTintMode="src_in"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:shadowRadius="50.300"
+            android:text="@string/BTLogin"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/BTRegistre"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:backgroundTintMode="src_in"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:shadowRadius="50.300"
+            android:text="@string/BTRegistre"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

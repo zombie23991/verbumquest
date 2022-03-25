@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/torre"
+    android:color="#66FF0000"
+    tools:context=".perfil">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="-47dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="-47dp">
+
+            <TextView
+                android:id="@+id/titol"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/boto_personalitzat_preguntes"
+                android:gravity="center"
+                android:text="@string/titol"
+                android:textColor="#FFFFFF"
+                android:textSize="85sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/nom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/caixa_border_radius"
+                android:paddingLeft="10dp"
+                android:text="@string/nom"
+                android:textColor="#FFFFFF"
+                android:textSize="76sp" />
+
+            <TextView
+                android:id="@+id/correu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/caixa_border_radius"
+                android:paddingLeft="10dp"
+                android:text="@string/correu"
+                android:textColor="#FFFFFF"
+                android:textSize="60dp" />
+
+            <TextView
+                android:id="@+id/puntuaciototal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/caixa_border_radius"
+                android:paddingLeft="10dp"
+                android:text="@string/puntuaciototal"
+                android:textColor="#FFFFFF"
+                android:textSize="68sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView"
+            android:layout_width="350dp"
+            android:layout_height="550dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            android:adjustViewBounds="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/adventurer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </pl.droidsonroids.gif.GifImageView>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</ScrollView>
