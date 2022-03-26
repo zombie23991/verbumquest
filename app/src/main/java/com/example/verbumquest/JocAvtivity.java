@@ -27,6 +27,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -400,7 +401,7 @@ public class JocAvtivity<asyncTask> extends AppCompatActivity {
         int punt = 0;
         TextView Fi, punts;
         ImageView imgStarOne, imgStarTwo, imgStarThree;
-        Button sortir, reintentar;
+        FloatingActionButton sortir, reintentar;
 
 
         miDialog.setContentView(R.layout.gameover);
