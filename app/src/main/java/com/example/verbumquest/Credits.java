@@ -39,11 +39,9 @@ public class Credits extends Activity {
         CardView creditsAlbert = findViewById(R.id.albertmora);
         //TextView linkedinAlbert = findViewById(R.id.linkedinAlbert);
 
-        linkedinJoël.setTypeface(Tf);
-        linkedinAdri.setTypeface(Tf);
-        linkedinAlbert.setTypeface(Tf);
 
-        linkedinJoël.setOnClickListener(new  View.OnClickListener(){
+
+        creditsJoël.setOnClickListener(new  View.OnClickListener(){
         @Override
         public void onClick(View view) {
             String url = "https://www.linkedin.com/in/jo%C3%ABl-marpons-gonzalez-767629225/";
@@ -54,7 +52,7 @@ public class Credits extends Activity {
         }
     });
 
-        linkedinAdri.setOnClickListener(new  View.OnClickListener(){
+        creditsAdri.setOnClickListener(new  View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 String url = "https://www.linkedin.com/in/adri%C3%A0-castany-aaaaaa1b7/";
@@ -65,7 +63,7 @@ public class Credits extends Activity {
             }
         });
 
-        linkedinAlbert.setOnClickListener(new  View.OnClickListener(){
+        creditsAlbert.setOnClickListener(new  View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 String url = "https://www.linkedin.com/in/albert-mora-costillo-219301226/";
