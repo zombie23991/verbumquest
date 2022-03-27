@@ -8,16 +8,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
+
 public class Credits extends Activity {
 
 
-    TextView creditsJoël;
+    CardView creditsJoël;
     TextView linkedinJoël;
 
-    TextView creditsAdri;
+    CardView creditsAdri;
     TextView linkedinAdri;
 
-    TextView creditsAlbert;
+    CardView creditsAlbert;
     TextView linkedinAlbert;
 
     @Override
@@ -28,18 +30,14 @@ public class Credits extends Activity {
         String ubicacio = "fonts/pixel.ttf";
         Typeface Tf = Typeface.createFromAsset(Credits.this.getAssets(), ubicacio);
 
-        TextView creditsJoël = findViewById(R.id.creditsJoël);
-        TextView linkedinJoël = findViewById(R.id.linkedinJoël);
+        CardView creditsJoël = findViewById(R.id.joelmarpons);
+        //TextView linkedinJoël = findViewById(R.id.linkedinJoël);
 
-        TextView creditsAdri = findViewById(R.id.creditsAdri);
-        TextView linkedinAdri = findViewById(R.id.linkedinAdri);
+        CardView creditsAdri = findViewById(R.id.adriacastany);
+        //TextView linkedinAdri = findViewById(R.id.linkedinAdri);
 
-        TextView creditsAlbert = findViewById(R.id.creditsAlbert);
-        TextView linkedinAlbert = findViewById(R.id.linkedinAlbert);
-
-        creditsJoël.setTypeface(Tf);
-        creditsAdri.setTypeface(Tf);
-        creditsAlbert.setTypeface(Tf);
+        CardView creditsAlbert = findViewById(R.id.albertmora);
+        //TextView linkedinAlbert = findViewById(R.id.linkedinAlbert);
 
         linkedinJoël.setTypeface(Tf);
         linkedinAdri.setTypeface(Tf);

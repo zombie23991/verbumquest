@@ -8,95 +8,195 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="199dp"
-        android:layout_height="82dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boto_personalitzat_preguntes"
         android:text="Crèdits"
         android:textAlignment="center"
-        android:textColor="#009688"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.046" />
 
-    <TextView
-        android:id="@+id/linkedinAdri"
-        android:layout_width="322dp"
-        android:layout_height="42dp"
-        android:fontFamily="sans-serif"
-        android:text="Linkedin: https://www.linkedin.com/in/adri%C3%A0-castany-aaaaaa1b7/"
-        android:textColor="#FFC107"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/adriacastany"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.249" />
+        app:layout_constraintVertical_bias="0.224"
+        android:backgroundTint="#C39603">
 
-    <TextView
-        android:id="@+id/linkedinAlbert"
-        android:layout_width="313dp"
-        android:layout_height="36dp"
-        android:text="https://www.linkedin.com/in/albert-mora-costillo-219301226/"
-        android:textColor="#455ACF"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imgAdri"
+                android:layout_width="119dp"
+                android:layout_height="113dp"
+                android:layout_marginRight="5dp"
+                android:adjustViewBounds="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/adriacastany"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintVertical_bias="1.0"></ImageView>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="115dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/creditsAdri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Adrià Castany Carranza"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/creditsAdri2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dissenyador i programador"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/joelmarpons"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="#9521A8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.523" />
+        app:layout_constraintVertical_bias="0.469">
 
-    <TextView
-        android:id="@+id/creditsAlbert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Albert Mora Costillo: Programador principal"
-        android:textColor="#455ACF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.323"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="335dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-    <TextView
-        android:id="@+id/creditsJoël"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Joël Marpons Gonzalez: Programador i corrector"
-        android:textColor="#9C27B0"
+            <ImageView
+                android:id="@+id/imgJoel"
+                android:layout_width="119dp"
+                android:layout_height="113dp"
+                android:layout_marginRight="5dp"
+                android:adjustViewBounds="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/joelmarpons"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintVertical_bias="1.0"></ImageView>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="115dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/creditsJoël"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Joël Marpons Gonzalez"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/creditsJoel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Programador i corrector"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/albertmora"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="#FF455ACF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.332" />
+        app:layout_constraintVertical_bias="0.721">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-    <TextView
-        android:id="@+id/creditsAdri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="Adrià Castany Carranza: Dissenyador i programador"
-        android:textColor="#FFC107"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202" />
+            <ImageView
+                android:id="@+id/imgAlbert"
+                android:layout_width="119dp"
+                android:layout_height="113dp"
+                android:layout_marginRight="5dp"
+                android:adjustViewBounds="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/albertmora"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintVertical_bias="1.0"></ImageView>
 
-    <TextView
-        android:id="@+id/linkedinJoël"
-        android:layout_width="302dp"
-        android:layout_height="39dp"
-        android:text="https://www.linkedin.com/in/jo%C3%ABl-marpons-gonzalez-767629225/"
-        android:textColor="#9C27B0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.412"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="115dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/creditsAlbert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Albert Mora Costillo"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/creditsAlbert2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Programador principal"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
