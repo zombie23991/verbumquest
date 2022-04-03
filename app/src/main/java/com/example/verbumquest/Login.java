@@ -26,7 +26,6 @@ public class Login extends AppCompatActivity {
     Button btLogin;
     FirebaseAuth auth;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,12 +48,12 @@ public class Login extends AppCompatActivity {
                /* VALIDAR LES DADES */
                     /* VALIDACIÓ CORREU ELECTRÒNIC */
                if(!Patterns.EMAIL_ADDRESS.matcher(correu).matches()){
-                   etCorreuLogin.setError("El correu introduït és invàlid");
+                   Toast.makeText(Login.this, "El correu introduït és invàlid", Toast.LENGTH_LONG).show();
                    etCorreuLogin.setFocusable(true);
 
                    /* VALIDACÓ CONTRASSENYA */
                } else if(contrassenya.length() < 6) {
-                   etContrassenyaLogin.setError("La contrassenya ha de ser de 6 caracters");
+                   Toast.makeText(Login.this, "La contrassenya ha de ser de 6 caracters", Toast.LENGTH_LONG).show();
                    etContrassenyaLogin.setFocusable(true);
                } else {
                    loginJugador(correu, contrassenya);
@@ -73,14 +72,14 @@ public class Login extends AppCompatActivity {
                             FirebaseUser user = auth.getCurrentUser();
                             startActivity(new Intent(Login.this, Menu.class));
                             assert user != null; // CONFIRMACIO DE QUE L'USUARI NO ES NULL
-                            Toast.makeText(Login.this, "Benvingut" + user.getEmail(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "Benvingut " + user.getEmail(), Toast.LENGTH_LONG).show();
                         }
                     }
                     //SI FALLA EL LOGIN MOSTRA:
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(Login.this, "El correu electrònic o la contrassenya són incorrectes", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, "El correu electrònic o la contrassenya són incorrectes", Toast.LENGTH_LONG).show();
                     }
                 });
         }

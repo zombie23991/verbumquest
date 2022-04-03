@@ -28,11 +28,11 @@
             android:exported="true"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".MonPla"
+            android:name=".monPla"
             android:exported="true"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".JocAvtivity"
+            android:name=".JocActivity"
             android:exported="true"
             android:screenOrientation="portrait"/>
         <activity

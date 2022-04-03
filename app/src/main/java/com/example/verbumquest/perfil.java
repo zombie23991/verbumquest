@@ -30,18 +30,12 @@ import java.net.Authenticator;
 
 public class perfil extends AppCompatActivity {
 
-    FirebaseFirestore fstore; //VARIABLE BASE DE DADES DES DE FIREBASE
-    FirebaseAuth auth; //AUTENTICACIÓ FIREBASE
-
     TextView tvNom, tvCorreu, tvPuntuacio, titol;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
-
-        auth = FirebaseAuth.getInstance();
-        fstore = FirebaseFirestore.getInstance();
 
         tvNom = findViewById(R.id.nom);
         tvCorreu = findViewById(R.id.correu);
@@ -58,33 +52,8 @@ public class perfil extends AppCompatActivity {
         tvPuntuacio.setTypeface(Tf);
         titol.setTypeface(Tf);
 
-        FirebaseUser user = auth.getCurrentUser();
-        assert user != null; // CONFIRMACIO DE QUE L'USUARI NO ES NULL
-        Consulta(user);
+
 
     }
-
-    private void Consulta(FirebaseUser user){
-        String stUid = user.getUid();
-        DocumentReference documentReference = fstore.collection("Usuaris").document(stUid);
-        documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if(task.isSuccessful()){
-                    DocumentSnapshot dadesUsuari = task.getResult();
-                    if (dadesUsuari.exists()) {
-                        Log.d(TAG, "DocumentSnapshot data: " + dadesUsuari.getData());
-                        tvNom.append(" " + dadesUsuari.getData().get("Nom Usuari").toString());
-                        tvCorreu.append(" " + dadesUsuari.getData().get("Correu").toString());
-                    } else {
-                        Log.d(TAG, "No existeix l'usuari");
-                    }
-                } else {
-                    Log.d(TAG, "get failed with ", task.getException());
-                }
-            }
-        });
-    }
-
 
 }

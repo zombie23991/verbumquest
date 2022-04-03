@@ -18,7 +18,6 @@ import com.example.verbumquest.databinding.ActivityVerbumQuestBinding;
 
 public class VerbumQuest extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +27,7 @@ public class VerbumQuest extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(VerbumQuest.this,Menu.class);
+                Intent intent = new Intent(VerbumQuest.this, Menu.class);
                 startActivity(intent);
             };
         },DuracioPantalla);

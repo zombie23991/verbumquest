@@ -1,8 +1,14 @@
 package com.example.verbumquest;
 
+import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.GridLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,15 +18,16 @@ import com.example.verbumquest.model.ItemList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class monDesert extends Mapa{
-    private RecyclerAdapter adapter;
+public class monPla extends Mapa {
     public static RecyclerView rvLlista;
-    public static List<ItemList> items;
+    private RecyclerAdapter adapter;
+    public static List<ItemList> nivells = new ArrayList<ItemList>();
+    private cridesFirebase objCridarBD = new cridesFirebase();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mon_desert);
+        setContentView(R.layout.activity_monpla);
 
         //Crida de procesos
         initViews();
@@ -33,18 +40,17 @@ public class monDesert extends Mapa{
         adapter.notifyDataSetChanged();
     }
 
-    // Declarar vistes
     protected void initViews() {
         rvLlista = findViewById(R.id.rvLlista);
     }
 
-    // Declarar valors
+    //Declarar valors
     protected void initValues() {
         LinearLayoutManager manager = new LinearLayoutManager(this);
         rvLlista.setLayoutManager(manager);
-        adapter = new RecyclerAdapter(getArrayNivells(2));
+        adapter = new RecyclerAdapter(getArrayNivells(1));
 
         rvLlista.setAdapter(adapter);
     }
-}
 
+}
