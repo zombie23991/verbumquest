@@ -1,15 +1,13 @@
 package com.example.verbumquest;
 
 public class Usuari {
-    String stUid;
     String stCorreu;
     String stContrassenya;
     String stNomUsuari;
 
-    public Usuari(String stUid, String stCorreu, String stContrassenya, String stNomUsuari) {
-        this.stUid = stUid;
-        this.stCorreu = stCorreu;
+    public Usuari(String stContrassenya, String stCorreu, String stNomUsuari) {
         this.stContrassenya = stContrassenya;
+        this.stCorreu = stCorreu;
         this.stNomUsuari = stNomUsuari;
     }
 }

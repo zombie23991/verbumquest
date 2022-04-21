@@ -10,9 +10,6 @@ public class ItemList  implements Serializable {
     private String mundo;
     private int imgResource;
 
-
-
-
     private int imgStarOne;
     private int imgStarTwo;
     private int imgStarThree;
@@ -20,18 +17,17 @@ public class ItemList  implements Serializable {
     private boolean locked;
 
     //Creem els getters per extreure informació
-    //El ordre sera com es tindra que declarar al crear un nivell
-    public ItemList(String mundo ,String titol, String npreguntes, int puntuacio, boolean locked,  int imgResource, int imgStarOne, int imgStarTwo, int imgStarThree) {
+    //L'ordre sera com s'haura de declarar al crear un nivell
+    public ItemList(String mundo, String titol, String npreguntes, int puntuacio, boolean locked,  int imgResource, int imgStarOne, int imgStarTwo, int imgStarThree) {
         this.titol = titol;
         this.npreguntes = npreguntes;
         this.imgResource = imgResource;
-        this.imgStarOne = imgStarOne;
         this.puntuacio = puntuacio;
+        this.imgStarOne = imgStarOne;
         this.imgStarTwo = imgStarTwo;
         this.imgStarThree = imgStarThree;
         this.locked = locked;
         this.mundo = mundo;
-        this.puntuacio = 0;
     }
 
     public String getTitol() {
@@ -69,8 +65,6 @@ public class ItemList  implements Serializable {
     public int getImgStarOne() {
         return imgStarOne;
     }
-
-
 
     public int getImgStarTwo() {
         return imgStarTwo;

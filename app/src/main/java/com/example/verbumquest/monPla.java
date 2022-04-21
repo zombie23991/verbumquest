@@ -1,9 +1,11 @@
 package com.example.verbumquest;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -16,14 +18,14 @@ import com.example.verbumquest.model.ItemList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class monSelva extends Mapa {
+public class monPla extends Mapa {
     public static RecyclerView rvLlista;
     private RecyclerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mon_selva);
+        setContentView(R.layout.activity_monpla);
 
         //Crida de procesos
         initViews();
@@ -44,8 +46,9 @@ public class monSelva extends Mapa {
     protected void initValues() {
         LinearLayoutManager manager = new LinearLayoutManager(this);
         rvLlista.setLayoutManager(manager);
-        adapter = new RecyclerAdapter(getArrayNivells(3));
+        adapter = new RecyclerAdapter(getArrayNivells(1));
 
         rvLlista.setAdapter(adapter);
     }
+
 }

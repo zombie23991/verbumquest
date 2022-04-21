@@ -65,12 +65,12 @@ public class Registre extends AppCompatActivity {
                     /* VALIDACIÓ CORREU ELECTRÒNIC */
                 if(!nom.isEmpty() && !correu.isEmpty() && !contrassenya.isEmpty()){
                     if(!Patterns.EMAIL_ADDRESS.matcher(correu).matches()){
-                        etCorreu.setError("El correu introduït és invàlid");
+                        Toast.makeText(Registre.this, "El correu introduït és invàlid", Toast.LENGTH_LONG).show();
                         etCorreu.setFocusable(true);
 
                         /* VALIDACÓ CONTRASSENYA */
                     } else if(contrassenya.length() < 6) {
-                        etContrassenya.setError("La contrassenya ha de ser de 6 caracters");
+                        Toast.makeText(Registre.this, "La contrassenya ha de ser de 6 caracters", Toast.LENGTH_LONG).show();
                         etContrassenya.setFocusable(true);
                     } else {
                         registrarJugador(correu, contrassenya);

@@ -1,33 +1,36 @@
 package com.example.verbumquest;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseUser;
-
-import java.io.Serializable;
 
 public class Menu extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseUser user;
     Button usuari, jugarBtn, torre, quisom, TancarSessio;
-    static public generarPreguntes generador;
+    //static public cridesFirebase generador;
+    static public cridesFirebase objCridarBD = new cridesFirebase();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        Mapa carregarPuntuacio = new Mapa();
+        carregarPuntuacio.getItems();
+        objCridarBD.agafarPuntuacio("Esplanada");
 
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
@@ -48,6 +51,10 @@ public class Menu extends AppCompatActivity {
         jugarBtn.setTypeface(Tf);
         torre.setTypeface(Tf);
         quisom.setTypeface(Tf);
+
+        if(objCridarBD.getPreguntes().size() < 1) {
+            objCridarBD.setPreguntes();
+        }
 
         jugarBtn.setOnClickListener(new  View.OnClickListener(){
             @Override
@@ -87,8 +94,6 @@ public class Menu extends AppCompatActivity {
                 TancarSessio();
             }
         });
-        generador = new generarPreguntes();
-        generador.setPreguntes();
     }
 
     //S'executa quan el joc esta obert

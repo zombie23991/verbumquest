@@ -12,11 +12,9 @@ import com.example.verbumquest.model.ItemList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class monDesert extends AppCompatActivity {
+public class monDesert extends Mapa{
     private RecyclerAdapter adapter;
     public static RecyclerView rvLlista;
-    public static List<ItemList> items;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,34 +32,18 @@ public class monDesert extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
-    //Declarar vistas
-    private void initViews() {
+    // Declarar vistes
+    protected void initViews() {
         rvLlista = findViewById(R.id.rvLlista);
     }
 
-    //Declarar valors
-    private void initValues() {
+    // Declarar valors
+    protected void initValues() {
         LinearLayoutManager manager = new LinearLayoutManager(this);
         rvLlista.setLayoutManager(manager);
-        items = getItems();
-        adapter = new RecyclerAdapter(items);
-        rvLlista.setAdapter(adapter);
-    }
+        adapter = new RecyclerAdapter(getArrayNivells(2));
 
-    //Creacio de nivells
-    private List<ItemList> getItems() {
-        List<ItemList> itemLists = new ArrayList<>();
-        itemLists.add(new ItemList("Desert","Lvl: 1", "Preguntes totals: 5",0 , false, R.drawable.minifire,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Desert","Lvl: 2", "Preguntes totals: 5", 0 , true, R.drawable.mummy,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Desert","Lvl: 3", "Preguntes totals: 5", 0 , true, R.drawable.scorpio,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Desert","Lvl: 4", "Preguntes totals: 5", 0 , true, R.drawable.snake,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Desert","Lvl 5", "Preguntes totals: 5", 0, true, R.drawable.deceased,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Desert","Lvl 6", "Preguntes totals: 5", 0,true,  R.drawable.mummy,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Desert","Lvl 7", "Preguntes totals: 5", 0,true,  R.drawable.centipede,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Desert","Lvl 8", "Preguntes totals: 5",0,true, R.drawable.mummy,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Desert","Lvl 9", "Preguntes totals: 5", 0,true,  R.drawable.battle_turtle,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        itemLists.add(new ItemList("Desert","Lvl 10", "Preguntes totals: 5",0,true, R.drawable.skeleton,R.drawable.staroff, R.drawable.staroff, R.drawable.staroff));
-        return itemLists;
+        rvLlista.setAdapter(adapter);
     }
 }
 
