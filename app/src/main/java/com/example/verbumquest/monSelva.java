@@ -19,7 +19,6 @@ import java.util.List;
 public class monSelva extends Mapa {
     public static RecyclerView rvLlista;
     private RecyclerAdapter adapter;
-    public static List<ItemList> items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

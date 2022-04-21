@@ -408,29 +408,26 @@ public class JocActivity<asyncTask> extends AppCompatActivity {
 
 
         if(jugador.getVides() == 0){
-            Fi.setText("Has perdut, torna a intentar-ho!");
-            objCridarBD.registrarPuntuacio(detallItem.getMundo(), posicio, 0);
-        }
-        else if(jugador.getVides() == 1){
-            imgStarOne.setImageResource(R.drawable.star);
-            punt = 1;
-            objCridarBD.registrarPuntuacio(detallItem.getMundo(), posicio, punt);
-        }
-        else if(jugador.getVides() == 2){
-            imgStarOne.setImageResource(R.drawable.star);
-            imgStarTwo.setImageResource(R.drawable.star);
-            punt = 2;
-            objCridarBD.registrarPuntuacio(detallItem.getMundo(), posicio, punt);
-        }
-        else if(jugador.getVides() == 3){
-            imgStarOne.setImageResource(R.drawable.star);
-            imgStarTwo.setImageResource(R.drawable.star);
-            imgStarThree.setImageResource(R.drawable.star);
-            punt = 3;
-            objCridarBD.registrarPuntuacio(detallItem.getMundo(), posicio, punt);
-        }
+                Fi.setText("Has perdut, torna a intentar-ho!");
+                objCridarBD.registrarPuntuacio(detallItem.getMundo(), posicio, 0);
+            }
+            else if(jugador.getVides() == 1){
+                imgStarOne.setImageResource(R.drawable.star);
+                objCridarBD.registrarPuntuacio(detallItem.getMundo(), posicio, 1);
+            }
+            else if(jugador.getVides() == 2){
+                imgStarOne.setImageResource(R.drawable.star);
+                imgStarTwo.setImageResource(R.drawable.star);
+                objCridarBD.registrarPuntuacio(detallItem.getMundo(), posicio, 2);
+            }
+            else if(jugador.getVides() == 3){
+                imgStarOne.setImageResource(R.drawable.star);
+                imgStarTwo.setImageResource(R.drawable.star);
+                imgStarThree.setImageResource(R.drawable.star);
+                objCridarBD.registrarPuntuacio(detallItem.getMundo(), posicio, 3);
 
-        finalPunt = punt;
+            objCridarBD.agafarPuntuacio(detallItem.getMundo());
+        }
 
         sortir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -450,7 +447,7 @@ public class JocActivity<asyncTask> extends AppCompatActivity {
                 enemic.setVides(0);
                 if(mundo.getText().equals("Torre")){
                     enemic.setVides(enemic.getVides() + 10);
-                }else{
+                } else {
                 enemic.setVides(enemic.getVides() + 5);}
                 contador = 5;
                 vides();

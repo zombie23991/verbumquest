@@ -15,7 +15,6 @@ import java.util.List;
 public class monDesert extends Mapa{
     private RecyclerAdapter adapter;
     public static RecyclerView rvLlista;
-    public static List<ItemList> items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

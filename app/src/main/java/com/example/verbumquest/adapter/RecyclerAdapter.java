@@ -38,14 +38,17 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.Recyc
     public void onBindViewHolder(@NonNull RecyclerHolder holder, int position) {
         ItemList item = items.get(position);
 
+        item.setImgStarOne(R.drawable.staroff);
+        item.setImgStarTwo(R.drawable.staroff);
+        item.setImgStarThree(R.drawable.staroff);
 
         if(item.getPuntuacio() == 1) {
-            item.setImgStarTwo(R.drawable.star);
+            item.setImgStarOne(R.drawable.star);
         }
 
         else if (item.getPuntuacio() == 2) {
+            item.setImgStarOne(R.drawable.star);
             item.setImgStarTwo(R.drawable.star);
-            item.setImgStarThree(R.drawable.star);
         }
 
         else if(item.getPuntuacio() == 3) {

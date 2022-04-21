@@ -21,8 +21,6 @@ import java.util.List;
 public class monPla extends Mapa {
     public static RecyclerView rvLlista;
     private RecyclerAdapter adapter;
-    public static List<ItemList> nivells = new ArrayList<ItemList>();
-    private cridesFirebase objCridarBD = new cridesFirebase();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

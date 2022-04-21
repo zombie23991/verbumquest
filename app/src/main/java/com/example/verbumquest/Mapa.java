@@ -133,25 +133,6 @@ public class Mapa extends AppCompatActivity {
         }
 
         ItemList nivell = nivells.get(posNivell);
-
-        if (puntuacio == 0){
-            nivell.setImgStarOne(R.drawable.staroff);
-            nivell.setImgStarTwo(R.drawable.staroff);
-            nivell.setImgStarThree(R.drawable.staroff);
-        } else if(puntuacio == 1) {
-            nivell.setImgStarOne(R.drawable.star);
-            nivell.setImgStarTwo(R.drawable.staroff);
-            nivell.setImgStarThree(R.drawable.staroff);
-        } else if(puntuacio == 2) {
-            nivell.setImgStarOne(R.drawable.star);
-            nivell.setImgStarTwo(R.drawable.star);
-            nivell.setImgStarThree(R.drawable.staroff);
-        } else if(puntuacio == 3) {
-            nivell.setImgStarOne(R.drawable.star);
-            nivell.setImgStarTwo(R.drawable.star);
-            nivell.setImgStarThree(R.drawable.star);
-        }
-
         nivell.setPuntuacio(puntuacio);
     }
 

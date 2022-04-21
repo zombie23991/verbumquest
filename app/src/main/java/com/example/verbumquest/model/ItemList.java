@@ -66,8 +66,6 @@ public class ItemList  implements Serializable {
         return imgStarOne;
     }
 
-
-
     public int getImgStarTwo() {
         return imgStarTwo;
     }
